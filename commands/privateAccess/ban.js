@@ -1,0 +1,136 @@
+const Discord = require("discord.js");
+const { stripIndents } = require("common-tags");
+const { promptMessage } = require("../../functions.js");
+
+module.exports = {
+    name: "ban",
+    category: "privateAccess",
+    run: async (bot, message, args) => {
+        function emoji(id) {
+            return bot.emojis.cache.get(id).toString();
+        }
+
+        const ErrorEmoji = "701898742151905432";
+        const SuccessEmoji = "702138405429051415";
+        const WarnEmoji = "702089902766161990";
+        const NotificationEmoji = "702091124113932336";
+        const AdminNotificationEmoji = "702118504819851324";
+        const ErrorColor = "0xFF4A4A";
+        const SuccessColor = "0x52C235";
+        const WarnColor = "0xFFB700";
+        const NotificationColor = "0x0098DE";
+        const AdminNotificationColor = "0x000000";
+
+        const Embed1 = new Discord.MessageEmbed()
+            .setTitle(`${emoji(`${WarnEmoji}`)}` + " **COMMAND INFO**")
+            .addField("COMMAND", "```Ban```", true)
+            .addField("PERMISSIONS", "```Administrator```", true)
+            .addField("USAGE", "```>ban @user <message>```", true)
+            .addField("DESCRIPTION", "```Bans a specified user and attaches a message.```", true)
+            .setColor(WarnColor)
+
+        const Embed2 = new Discord.MessageEmbed()
+            .setTitle(`${emoji(`${ErrorEmoji}`)}` + " **ERROR**")
+            .setDescription("```" + `Missing input: Reason` + "```")
+            .setColor(ErrorColor)
+
+        const Embed3 = new Discord.MessageEmbed()
+            .setTitle(`${emoji(`${ErrorEmoji}`)}` + " **ERROR**")
+            .setDescription("```" + `Missing permission: ADMINISTRATOR` + "```")
+            .setColor(ErrorColor)
+
+        const Embed4 = new Discord.MessageEmbed()
+            .setTitle(`${emoji(`${ErrorEmoji}`)}` + " **ERROR**")
+            .setDescription("```" + `Illegal ban.` + "```")
+            .setColor(ErrorColor)
+
+        const Embed7 = new Discord.MessageEmbed()
+            .setTitle(`${emoji(`${SuccessEmoji}`)}` + " **SUCCESS**")
+            .setDescription("```" + `Successfully aborted ban.` + "```")
+            .setColor(SuccessColor)
+
+        if (!args[0]) {
+            return message.channel.send(Embed1)
+        }
+
+        if (!args[1]) {
+            return message.channel.send(Embed2)
+        }
+
+        if (!message.member.hasPermission("ADMINISTRATOR")) {
+            return message.channel.send(Embed3)
+        }
+
+        const toBan = message.mentions.members.first() || message.guild.members.get(args[0]);
+
+        const Embed8 = new Discord.MessageEmbed()
+            .setTitle(`${emoji(`${AdminNotificationEmoji}`)}` + "**BAN COMMAND**")
+            .setDescription("```" + `Successfully banned ${toBan}.` + "```")
+            .setColor(SuccessColor)
+
+        const Embed9 = new Discord.MessageEmbed()
+            .setTitle(`${emoji(`${AdminNotificationEmoji}`)}` + " **BAN COMMAND**")
+            .setDescription("```" + `Verification has expired.` + "```")
+            .setFooter("You can no longer interact with the verification prompt.")
+            .setColor(AdminNotificationColor)
+
+        if (!toBan) {
+            return message.channel.send(Embed1)
+        }
+
+        if (toBan.id === message.author.id) {
+            return message.channel.send(Embed4)
+        }
+
+        if (!toBan.bannable) {
+            return message.channel.send(Embed4)
+        }
+
+        const Embed5 = new Discord.MessageEmbed()
+            .setColor(AdminNotificationColor)
+            .setThumbnail(toBan.user.displayAvatarURL())
+            .setFooter(message.member.displayName, message.author.displayAvatarURL())
+            .setTimestamp()
+            .setTitle(`${emoji(`${AdminNotificationEmoji}`)}` + " ADMIN NOTIFICATION")
+            .setDescription(stripIndents`**BANNED USER:** ${toBan} (${toBan.id})
+            **BANNED BY:** ${message.member} (${message.member.id})
+            **REASON:** ${args.slice(1).join(" ")}`);
+
+        const promptEmbed = new Discord.MessageEmbed()
+            .setTitle(`${emoji(`${AdminNotificationEmoji}`)}` + " **BAN AUTHORIZATION**")
+            .setColor(AdminNotificationColor)
+            .setDescription("*Verification expires in 60 seconds.*")
+            .addField("USER:", `${toBan}, ${toBan.id}`)
+            .setFooter("You must have the ADMINISTRATOR permission.")
+
+        await message.channel.send(promptEmbed).then(async msg => {
+            const emoji = await promptMessage(msg, message.author, 60, ["✅", "❎"]);
+
+            if (emoji === "✅") {
+
+                toBan.ban(args.slice(1).join(" "))
+                message.channel.send(Embed8)
+                    .catch(err => {
+                        if (err) {
+                            const ConsoleEmbed = new Discord.MessageEmbed()
+                                .setTitle(`${emoji(`${AdminNotificationEmoji}`)}` + " **TERMINAL ERROR**")
+                                .setDescription("```" + `${err}` + "```")
+                                .setColor(AdminNotificationColor)
+
+                            return message.channel.send(ConsoleEmbed)
+                        }
+                    });
+                const banChannel = message.guild.channels.cache.find(c => c.name === "bans");
+                banChannel.send(Embed5);
+
+            } else if (emoji === "❎") {
+                return message.channel.send(Embed7)
+            }
+
+            if (!emoji) {
+                return message.channel.send(Embed9)
+            }
+
+        });
+    }
+};
