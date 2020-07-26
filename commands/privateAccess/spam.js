@@ -57,16 +57,6 @@ module.exports = {
 
             let Message = args.join(" ")
             bot.spam = Message
-                .catch(err => {
-                    if (err) {
-                        const ConsoleEmbed = new Discord.MessageEmbed()
-                            .setTitle(`${emoji(`${AdminNotificationEmoji}`)}` + " **TERMINAL ERROR**")
-                            .setDescription("```" + `${err}` + "```")
-                            .setColor(AdminNotificationColor)
-
-                        return message.channel.send(ConsoleEmbed)
-                    }
-                })
         }
     }
 }
