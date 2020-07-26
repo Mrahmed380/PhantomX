@@ -4,7 +4,7 @@ let table = new ascii("Output");
 
 table.setHeading("File", "Status");
 module.exports = (bot) => {
-    readdirSync("./Commands/").forEach(dir => {
+    readdirSync("./commands/").forEach(dir => {
         const commands = readdirSync(`./commands/${dir}/`).filter(file => file.endsWith(".js"));
         for (let file of commands) {
             let pull = require(`../commands/${dir}/${file}`);
