@@ -55,20 +55,18 @@ module.exports = {
         } else {
             message.channel.send(Embed3)
 
-            setInterval(() => {
-                let Message = args.join(" ")
-                message.channel.send(Message)
-                    .catch(err => {
-                        if (err) {
-                            const ConsoleEmbed = new Discord.MessageEmbed()
-                                .setTitle(`${emoji(`${AdminNotificationEmoji}`)}` + " **TERMINAL ERROR**")
-                                .setDescription("```" + `${err}` + "```")
-                                .setColor(AdminNotificationColor)
+            let Message = args.join(" ")
+            bot.spam = Message
+                .catch(err => {
+                    if (err) {
+                        const ConsoleEmbed = new Discord.MessageEmbed()
+                            .setTitle(`${emoji(`${AdminNotificationEmoji}`)}` + " **TERMINAL ERROR**")
+                            .setDescription("```" + `${err}` + "```")
+                            .setColor(AdminNotificationColor)
 
-                            return message.channel.send(ConsoleEmbed)
-                        }
-                    })
-            }), 1000;
+                        return message.channel.send(ConsoleEmbed)
+                    }
+                })
         }
     }
 }

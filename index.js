@@ -7,6 +7,7 @@ const bot = new Client({
     disableEveryone: true
 })
 
+bot.spam = ""
 bot.commands = new Collection();
 bot.aliases = new Collection();
 bot.categories = fs.readdirSync("./commands/");
@@ -42,4 +43,12 @@ bot.on("message", async message => {
         command.run(bot, message, args)
 })
 
+bot.on("message", async (message) => {
+    if (bot.spam == "") return
+    if (message.author.id == "528675367028916224" && message.content.toLowerCase() == ">break") {
+        return bot.spam = ""
+    } else {
+        message.channel.send(bot.spam)
+    }
+})
 bot.login(token)
