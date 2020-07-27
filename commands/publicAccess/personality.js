@@ -37,11 +37,14 @@ module.exports = {
         const Field2 = ["North American", "South American", "African", "European", "Australian", "Asian", "Antartican"]
         const RandomField2 = Field2[Math.floor(Math.random() * Field2.length)];
 
-        const Field3 = ["Joyful", "Satanic", "Loyal", "Friendly", "Helpful", "Extrovert", "Introvert", "Realistic", "Social", "Artistic", "Anti-social", "Agreeable", "Agressive"]
+        const Field3 = ["Rock", "Jass", "Rap,", "Hip Hop", "Heavy Metal", "Reggae", "Classic", "Dubstep", "Electro Swing", "Electronic"]
         const RandomField3 = Field3[Math.floor(Math.random() * Field3.length)];
 
         const Field4 = ["Satan", "Executioner", "Be-header", "Afton", "Serial Killer", "Zach Nolan", "Jeff The Killer", "Man Behind the Slaughter", "Demon", "Phantom"]
         const RandomField4 = Field4[Math.floor(Math.random() * Field4.length)];
+
+        const Field5 = ["Hip Hop", "Electro Swing", "Trap", "Electronic"]
+        const RandomField5 = Field5[Math.floor(Math.random() * Field5.length)];
 
         const Embed1 = new Discord.MessageEmbed()
             .setTitle("**YOUR PERSONALITY**")
@@ -49,7 +52,7 @@ module.exports = {
             .addField("DEPRESSION", "```" + `${Random}%` + "```", true)
             .addField("DREAM JOB", "```" + `${RandomField1}` + "```", true)
             .addField("NATIONALITY", "```" + `${RandomField2}` + "```", true)
-            .addField("TYPE", "```" + `${RandomField3}` + "```", true)
+            .addField("FAVORITE MUSIC", "```" + `${RandomField3}` + "```", true)
             .addField("CRIMINAL OFFENCES", "```" + `${Random2}` + "```", true)
             .setColor(SuccessColor)
 
@@ -59,7 +62,7 @@ module.exports = {
             .addField("DEPRESSION", "```" + `${Random4}%` + "```", true)
             .addField("DREAM JOB", "```" + `${RandomField4}` + "```", true)
             .addField("NATIONALITY", "```" + `Hell` + "```", true)
-            .addField("TYPE", "```" + `Sinister` + "```", true)
+            .addField("FAVORITE MUSIC", "```" + `${RandomField5}` + "```", true)
             .addField("CRIMINAL OFFENCES", "```" + `666` + "```", true)
             .setColor(SuccessColor)
 
