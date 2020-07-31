@@ -44,16 +44,16 @@ module.exports = {
             .setColor(NotificationColor)
 
         message.channel.send(Embed3)
-        .catch(err => {
-            if (err) {
-                const ConsoleEmbed = new Discord.MessageEmbed()
-                    .setTitle(`${emoji(`${AdminNotificationEmoji}`)}` + " **TERMINAL ERROR**")
-                    .setDescription("```" + `${err}` + "```")
-                    .setColor(AdminNotificationColor)
+            .catch(err => {
+                if (err) {
+                    const ConsoleEmbed = new Discord.MessageEmbed()
+                        .setTitle(`${emoji(`${AdminNotificationEmoji}`)}` + " **TERMINAL ERROR**")
+                        .setDescription("```" + `${err}` + "```")
+                        .setColor(AdminNotificationColor)
 
-                return message.channel.send(ConsoleEmbed)
-            }
-        });
+                    return message.channel.send(ConsoleEmbed)
+                }
+            });
         setTimeout(function () {
             message.reply(Embed4)
         }, ms(Timer))
