@@ -25,6 +25,7 @@ module.exports = (bot) => {
                 pull.aliases.forEach(alias => bot, aliases.set(alias, pull.name))
             }
         }
+    }
     });
     console.log(table.toString());
 }
