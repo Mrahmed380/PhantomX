@@ -66,7 +66,7 @@ module.exports = {
             if (Emoji === "⬅️") {
 
                 msg2.reactions.removeAll().then(async msg2 => {
-                    msg.edit(Embed1)
+                    msg2.edit(Embed1)
                 }, 100)
             }
         });
