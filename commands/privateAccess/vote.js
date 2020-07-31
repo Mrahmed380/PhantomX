@@ -18,12 +18,12 @@ module.exports = {
         const InformationColor = "0x009DF9"
 
         const Embed1 = new Discord.MessageEmbed()
-            .setTitle(`${emoji(`${WarnEmoji}`)}` + " **COMMAND INFO**")
+            .setTitle(`${emoji(`${InformationEmoji}`)}` + " **COMMAND INFO**")
             .addField("COMMAND", "```Vote```", true)
             .addField("PERMISSIONS", "```Administrator```", true)
             .addField("USAGE", "```>vote #channel <message>```", true)
             .addField("DESCRIPTION", "```Sends an embed to the specified channel and attaches a message.```", true)
-            .setColor(WarnColor)
+            .setColor(InformationColor)
 
         if (!message.member.permissions.has("ADMINISTRATOR")) {
             return message.channel.send(Embed1)
