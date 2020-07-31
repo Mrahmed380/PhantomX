@@ -43,8 +43,8 @@ module.exports = {
             .addField(`NICKNAME`, "```" + `${userToCheck.nickname || "none"}` + "```", true)
             .addField(`USER ID`, "```" + `${userToCheck.id}` + "```", true)
             .addField(`USER TAG`, "```" + `${userToCheck.tag}` + "```", true)
-            .addField(`ACCOUNT STATUS`, "```" + `${userToCheck.presence.status}` + "```", true)
-            .addField(`ACCOUNT CREATION DATE`, "```" + `${dateFormat(userToCheck.createdAt, "dd/mm/yy")}` + "```", true)
+            .addField(`STATUS`, "```" + `${userToCheck.presence.status}` + "```", true)
+            .addField(`REGISTRATION DATE`, "```" + `${dateFormat(userToCheck.createdAt, "dd/mm/yy")}` + "```", true)
 
         message.channel.send(Embed2)
             .catch(err => {
