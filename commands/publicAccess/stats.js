@@ -32,7 +32,7 @@ module.exports = {
         }
 //
         const Embed = new Discord.MessageEmbed()
-            .setTitle("**MY STATUS**")
+            .setTitle("**SYSTEM STATUS**")
             .setColor(0xFAFAFA)
             .setDescription("**ONLINE**")
             .setThumbnail(bot.imageURL)
