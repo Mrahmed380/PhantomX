@@ -34,6 +34,10 @@ module.exports = {
             return message.channel.send(Embed1)
         }
 
+        if (!message.member.permissions.has("ADMINISTRATOR")) {
+            return message.channel.send(Embed2)
+        }
+
             let BotMessage = args.join(" ")
             message.delete().catch();
             message.channel.send(BotMessage)
