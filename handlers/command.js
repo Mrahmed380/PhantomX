@@ -4,8 +4,8 @@ let table = new ascii("Output");
 
 table.setHeading("File", "Status");
 module.exports = (bot) => {
-    readdirSync("./commands/").forEach(dir => {
-        const commands = readdirSync(`./commands/${dir}/`).filter(file => file.endsWith(".js"));
+    readdirSync("./commands/").filter(x => x.includes(".DS_Store") == false).map(dir => {
+        const commands = readdirSync(`./commands/${dir}/`).filter(f => f.includes(".DS_store") == false).map(cmd=>{
         for (let file of commands) {
             let pull = require(`../commands/${dir}/${file}`);
             if (pull.name) {
