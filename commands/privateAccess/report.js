@@ -79,11 +79,10 @@ module.exports = {
 
         const Embed6 = new Discord.MessageEmbed()
             .setAuthor("ADMIN REPORT", rMember.user.displayAvatarURL())
-            .setThumbnail(message.guild.iconURL())
+            .setThumbnail(message.author.displayAvatarURL({ dynamic: true, format: "png" }))
             .setTimestamp()
             .setColor(0x000000)
             .setDescription(stripIndents`MEMBER: ${rMember} (${rMember.user.id})
-            .setThumbnail(message.author.displayAvatarURL({ dynamic: true, format: "png" }))
             REPORTED BY: ${message.member}, ${message.member.user.id}
             REPORTED IN: ${message.channel}
             REASON: ${args.slice(1).join(" ")}`);
