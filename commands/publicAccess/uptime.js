@@ -33,6 +33,7 @@ module.exports = {
 
         const Embed = new Discord.MessageEmbed()
             .addField(`**UPTIME: **`, "```" + `${dhm(time)}` + "```")
+            .setThumbnail(bot.imageURL)
             .setColor(0xFAFAFA)
 
         message.channel.send(Embed)
