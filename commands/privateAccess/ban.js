@@ -102,7 +102,7 @@ module.exports = {
             .setFooter("Only the author can take action.")
 
         await message.channel.send(promptEmbed).then(async msg => {
-            const emoji = await promptMessage(msg, message.author, 60, ["738675745693630474", "❎"]);
+            const emoji = await promptMessage(msg, message.author, 60, ["738675745693630474", "738675252246085691"]);
 
             if (emoji === "738675745693630474") {
 
@@ -121,7 +121,7 @@ module.exports = {
                 const banChannel = message.guild.channels.cache.find(c => c.name === "bans");
                 banChannel.send(Embed5);
 
-            } else if (emoji === "❎") {
+            } else if (emoji === "738675252246085691") {
                 return message.channel.send(Embed7)
             }
 
