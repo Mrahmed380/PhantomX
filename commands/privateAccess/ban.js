@@ -34,7 +34,7 @@ module.exports = {
 
         const Embed3 = new Discord.MessageEmbed()
             .setTitle(`${emoji(`${ErrorEmoji}`)}` + " **ERROR**")
-            .setDescription("```" + `Missing permission: Administrator` + "```")
+            .setDescription("```" + `Missing permissions.` + "```")
             .setColor(ErrorColor)
 
         const Embed4 = new Discord.MessageEmbed()
