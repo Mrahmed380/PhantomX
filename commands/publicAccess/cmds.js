@@ -21,7 +21,10 @@ module.exports = {
         const Embed1 = new Discord.MessageEmbed()
             .setTitle(`${emoji(`${InformationEmoji}`)}` + " **COMMAND INFO**")
             .setColor(InformationColor)
-        const Embed2 = new Discord.MessageEmbed()
+            
+            const Embed2 = new Discord.MessageEmbed()
+            .setTitle(`${emoji(`${InformationEmoji}`)}` + " **COMMAND INFO**")
+            .setColor(InformationColor)
 
         const time = 1000 * 1000
 
