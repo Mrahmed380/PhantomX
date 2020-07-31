@@ -24,7 +24,7 @@ module.exports = {
 
         const Embed = new Discord.MessageEmbed()
             .setColor(0x000000)
-            .setDescription("**ROCK, PAPER, SCISSORS**")
+            .setTitle("**ROCK, PAPER, SCISSORS**")
             .setFooter("Please wait for all the emojis to load before clicking")
             .setTimestamp();
 
