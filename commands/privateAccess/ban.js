@@ -85,18 +85,18 @@ module.exports = {
         }
 
         const Embed5 = new Discord.MessageEmbed()
-            .setColor(AdminNotificationColor)
+            .setColor(SuccessColor)
             .setThumbnail(toBan.user.displayAvatarURL())
             .setFooter(message.member.displayName, message.author.displayAvatarURL())
             .setTimestamp()
-            .setTitle(`${emoji(`${AdminNotificationEmoji}`)}` + " ADMIN NOTIFICATION")
+            .setTitle(`${emoji(`${SuccessEmoji}`)}` + " BAN")
             .setDescription(stripIndents`**BANNED USER:** ${toBan} (${toBan.id})
             **BANNED BY:** ${message.member} (${message.member.id})
             **REASON:** ${args.slice(1).join(" ")}`);
 
         const promptEmbed = new Discord.MessageEmbed()
-            .setTitle(`${emoji(`${AdminNotificationEmoji}`)}` + " **BAN AUTHORIZATION**")
-            .setColor(AdminNotificationColor)
+            .setTitle(`${emoji(`${InformationEmoji}`)}` + " **BAN AUTHORIZATION**")
+            .setColor(InformationColor)
             .setDescription("*Verification expires in 60 seconds.*")
             .addField("USER:", `${toBan}, ${toBan.id}`)
             .setFooter("You must have the ADMINISTRATOR permission.")
