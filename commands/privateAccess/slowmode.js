@@ -18,12 +18,12 @@ module.exports = {
         const InformationColor = "0x009DF9"
 
         const Embed1 = new Discord.MessageEmbed()
-            .setTitle(`${emoji(`${WarnEmoji}`)}` + " **COMMAND INFO**")
+            .setTitle(`${emoji(`${InformationEmoji}`)}` + " **COMMAND INFO**")
             .addField("COMMAND", "```Slowmode```", true)
             .addField("PERMISSIONS", "```Administrator```", true)
             .addField("USAGE", "```>slowmode <number>```", true)
             .addField("DESCRIPTION", "```Sets a slowmode with the specified seconds. Alternate command is '>cooldown'.```", true)
-            .setColor(WarnColor)
+            .setColor(InformationColor)
 
         const Embed3 = new Discord.MessageEmbed()
             .setTitle(`${emoji(`${ErrorEmoji}`)}` + " **ERROR**")
