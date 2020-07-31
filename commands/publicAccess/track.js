@@ -38,7 +38,7 @@ module.exports = {
 
         const Embed2 = new Discord.MessageEmbed()
             .setAuthor("USER INFORMATION", `${userToCheck.displayAvatarURL()}`)
-            .setColor(0x000000)
+            .setColor(0xFAFAFA)
             .setTimestamp()
             .addField(`NICKNAME`, "```" + `${userToCheck.nickname || "none"}` + "```", true)
             .addField(`USER ID`, "```" + `${userToCheck.id}` + "```", true)
@@ -50,9 +50,9 @@ module.exports = {
             .catch(err => {
                 if (err) {
                     const ConsoleEmbed = new Discord.MessageEmbed()
-                        .setTitle(`${emoji(`${AdminNotificationEmoji}`)}` + " **TERMINAL ERROR**")
+                        .setTitle(`${emoji(`${ErrorEmoji}`)}` + " **TERMINAL ERROR**")
                         .setDescription("```" + `${err}` + "```")
-                        .setColor(AdminNotificationColor)
+                        .setColor(ErrorColor)
 
                     return message.channel.send(ConsoleEmbed)
                 }
