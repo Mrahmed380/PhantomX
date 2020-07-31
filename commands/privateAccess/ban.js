@@ -104,7 +104,7 @@ module.exports = {
         await message.channel.send(promptEmbed).then(async msg => {
             const emoji = await promptMessage(msg, message.author, 60, [":Success_Phantomizer:", "❎"]);
 
-            if (emoji === "✅") {
+            if (emoji === ":Success_Phantomizer:") {
 
                 toBan.ban(args.slice(1).join(" "))
                 message.channel.send(Embed8)
