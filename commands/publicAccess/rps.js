@@ -34,7 +34,7 @@ module.exports = {
         const Result = await getResult(Reacted, BotOptions)
         await m.reactions.removeAll();
 
-        const Embed = new Discord.MessageEmbed()
+        Embed
             .setTitle("GAME STATS")
             .addField(Result, `${Reacted} vs ${BotOptions}`)
             .setFooter("You       Bot");
