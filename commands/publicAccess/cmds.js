@@ -11,9 +11,9 @@ module.exports = {
         const time = 1000 * 1000
 
         const msg = await message.channel.send(publicCommandsImage).then(async msg => {
-            const LEmoji = await promptMessage(msg, message.author, time, ["➡️"]);
+            const Emoji = await promptMessage(msg, message.author, time, ["➡️"]);
 
-            if (LEmoji === "➡️") {
+            if Emoji === "➡️") {
                 let msg = await message.channel.send(privateCommandsImage);
 
                 message.reactions.removeAll().then(async msg => {
