@@ -47,17 +47,17 @@ module.exports = {
 
         const Embed4 = new Discord.MessageEmbed()
             .setTitle(`${emoji(`${ErrorEmoji}`)}` + " **ERROR**")
-            .setDescription("```" + `Missing input: Color` + "```")
+            .setDescription("```" + `Missing argument: color` + "```")
             .setColor(ErrorColor)
 
         const Embed5 = new Discord.MessageEmbed()
             .setTitle(`${emoji(`${ErrorEmoji}`)}` + " **ERROR**")
-            .setDescription("```" + `Missing input: Role name` + "```")
+            .setDescription("```" + `Missing argument: role name` + "```")
             .setColor(ErrorColor)
 
         const Embed6 = new Discord.MessageEmbed()
             .setTitle(`${emoji(`${ErrorEmoji}`)}` + " **ERROR**")
-            .setDescription("```" + `Missing input: User` + "```")
+            .setDescription("```" + `Missing argument: user` + "```")
             .setColor(ErrorColor)
 
         if (!args[0]) {
