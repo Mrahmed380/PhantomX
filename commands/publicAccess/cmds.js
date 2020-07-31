@@ -44,6 +44,7 @@ module.exports = {
             .addField("setstatus", "**rps**", true)
             .addField("serverinfo", "**slowmode**", true)
             .addField("spam", "**vote**", true)
+            .setFooter("Page 2/2")
             .setColor(InformationColor)
 
         const time = 1000 * 1000
