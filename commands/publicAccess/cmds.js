@@ -45,7 +45,7 @@ module.exports = {
             if (Emoji === "➡️") {
                 let msg = await message.channel.send(Embed1);
 
-                message.reactions.removeAll().then(async msg => {
+                msg.reactions.removeAll().then(async msg => {
                     msg.edit(Embed2)
                 }, 100)
             }
