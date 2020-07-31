@@ -19,10 +19,10 @@ module.exports = {
 
         const Embed1 = new Discord.MessageEmbed()
             .setTitle(`${emoji(`${InformationColor}`)}` + " **COMMAND INFO**")
-            .addField("COMMAND", "```rep```", true)
+            .addField("COMMAND", "```Say```", true)
             .addField("PERMISSIONS", "```None```", true)
-            .addField("USAGE", "```>rep <message>```", true)
-            .addField("DESCRIPTION", "```A 'say' command; Repeats whatever the user says.```", true)
+            .addField("USAGE", "```>say <message>```", true)
+            .addField("DESCRIPTION", "```Repeats whatever the user says.```", true)
             .setColor(InformationEmoji)
 
         const Embed2 = new Discord.MessageEmbed()
