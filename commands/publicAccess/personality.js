@@ -41,7 +41,7 @@ module.exports = {
         const Field4 = ["Satan", "Executioner", "Be-header", "Afton", "Serial Killer", "Zach Nolan", "Jeff The Killer", "Man Behind the Slaughter", "Demon", "Phantom"]
         const RandomField4 = Field4[Math.floor(Math.random() * Field4.length)];
 
-        const Field5 = ["Hip Hop", "Electro Swing", "Trap", "Electronic"]
+        const Field5 = ["Satanic", "Electro Swing", "Trap", "Electronic"]
         const RandomField5 = Field5[Math.floor(Math.random() * Field5.length)];
 
         const Embed1 = new Discord.MessageEmbed()
