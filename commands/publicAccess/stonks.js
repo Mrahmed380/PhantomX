@@ -23,7 +23,8 @@ module.exports = {
 
         const img = await randomPuppy(random);
         const embed = new Discord.MessageEmbed()
-            .setColor(0xFFFFFF)
+            .setColor(0xFAFAFA)
+            .setThumbnail(message.author.displayAvatarURL({ dynamic: true, format: "png" }))
             .setImage(img)
             .setURL(`https://reddit.com/r/${random}`);
 
