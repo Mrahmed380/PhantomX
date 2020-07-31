@@ -31,6 +31,7 @@ module.exports = {
             .addField("timer", "**track**", true)
             .addField("uptime", "**version**", true)
             .addField("weather", `\u200b`, true)
+            .setFooter("Page 1/2")
             .setColor(InformationColor)
 
         const Embed2 = new Discord.MessageEmbed()
