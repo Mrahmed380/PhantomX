@@ -18,21 +18,22 @@ module.exports = {
         const InformationColor = "0x009DF9"
 
         const Embed1 = new Discord.MessageEmbed()
-            .setTitle(`${emoji(`${WarnEmoji}`)}` + " **COMMAND INFO**")
+            .setTitle(`${emoji(`${InformationEmoji}`)}` + " **COMMAND INFO**")
             .addField("COMMAND", "```Spam```", true)
             .addField("PERMISSIONS", "```Senpai```", true)
             .addField("USAGE", "```>spam <message>```", true)
             .addField("DESCRIPTION", "```Spams an infinite amount of messages. Can only be stopped by resetting me.```", true)
-            .setColor(WarnColor)
+            .setColor(InformationColor)
 
         const Embed2 = new Discord.MessageEmbed()
             .setTitle(`${emoji(`${ErrorEmoji}`)}` + " **ERROR**")
-            .setDescription("```" + `Missing permission: ADMINISTRATOR` + "```")
+            .setDescription("```" + `Missing permissions.` + "```")
             .setColor(ErrorColor)
 
         const Embed3 = new Discord.MessageEmbed()
             .setTitle(`${emoji(`${SuccessEmoji}`)}` + " **SUCCESS**")
-            .setDescription("```" + `Commands locked out. Manually shut down bot to override system.` + "```")
+            .setThumbnail(message.author.displayAvatarURL({ dynamic: true, format: "png" }))
+            .setDescription("```" + `Spam mode enabled - Say ">break" to kill the command.` + "```")
             .setColor(SuccessColor)
 
         const Embed4 = new Discord.MessageEmbed()
