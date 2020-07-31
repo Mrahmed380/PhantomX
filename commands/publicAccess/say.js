@@ -27,7 +27,7 @@ module.exports = {
 
         const Embed2 = new Discord.MessageEmbed()
             .setTitle(`${emoji(`${ErrorEmoji}`)}` + " **ERROR**")
-            .setDescription("```" + `You have been restricted from using this command.` + "```")
+            .setDescription("```" + `Missing permissions.` + "```")
             .setColor(ErrorColor)
 
         if (!args[0]) {
