@@ -45,7 +45,7 @@ module.exports = {
         message.channel.setRateLimitPerUser(args[0])
 
         const Embed4 = new Discord.MessageEmbed()
-            .setTitle(`${emoji(`${SuccessEmoji}`)}` + " **SLOWMODE COMMAND**")
+            .setTitle(`${emoji(`${SuccessEmoji}`)}` + " **SUCCESS**")
             .setDescription("```" + `Successfully enabled slowmode: ${args[0]} second(s)` + "```")
             .setColor(SuccessColor)
 
