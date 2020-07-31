@@ -56,7 +56,7 @@ module.exports = {
                 }
             });
         setTimeout(function () {
-            message.reply(Embed4)
+            message.reply(Embed3)
         }, ms(Timer))
     }
 }
