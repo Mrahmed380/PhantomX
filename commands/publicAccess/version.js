@@ -8,6 +8,7 @@ module.exports = {
 
         const Embed = new Discord.MessageEmbed()
             .setTitle("**VERSION**")
+            .setThumbnail(bot.user.displayAvatarURL())
             .setColor(0xFFFAFA)
             .addField(`**VERSION: **`, "```" + "4.7" + "```")
 
