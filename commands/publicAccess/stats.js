@@ -32,7 +32,7 @@ module.exports = {
         }
 
         const Embed = new Discord.MessageEmbed()
-            .setTitle("**BOT STATUS**")
+            .setTitle("**SYSTEM STATUS**")
             .setColor(0xFAFAFA)
             .setDescription("**ONLINE**")
             .addField("VERSION: ", "```" + "4.7" + "```", true)
@@ -40,7 +40,6 @@ module.exports = {
             .addField("UPTIME: ", "```" + `${dhm(time)}` + "```", true)
             .addField("SERVERS: ", "```" + `${bot.guilds.cache.size}` + "```", true)
             .addField("Updates: ", `\u200b`)
-            .setImage("https://cdn.discordapp.com/attachments/714096542944067694/736668233272393829/BeFunky-photo.png", true)
 
         message.channel.send(Embed)
             .catch(err => {
