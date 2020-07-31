@@ -14,7 +14,7 @@ module.exports = {
             const LEmoji = await promptMessage(msg, message.author, time, ["➡️"]);
 
             if (LEmoji === "➡️") {
-                await msg.edit(privateCommandsImage);
+                let msg = await message.channel.send(privateCommandsImage);
 
                 message.reactions.removeAll().then(async msg => {
                     message.edit(privateCommandsImage)
