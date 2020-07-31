@@ -31,7 +31,7 @@ module.exports = {
 
         const Embed2 = new Discord.MessageEmbed()
             .setTitle(`${emoji(`${ErrorEmoji}`)}` + " **ERROR**")
-            .setDescription("```" + `Missing input: Channel` + "```")
+            .setDescription("```" + `Missing argument: Channel` + "```")
             .setColor(ErrorColor)
 
         const Embed3 = new Discord.MessageEmbed()
