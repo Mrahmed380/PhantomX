@@ -58,7 +58,7 @@ module.exports = {
         }
 
         if (!rMember) {
-            return message.channel.send(Embed1);
+            return message.channel.send(Embed2);
         }
 
         if (!args[0]) {
