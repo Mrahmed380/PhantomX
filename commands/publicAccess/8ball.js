@@ -18,12 +18,12 @@ module.exports = {
         const InformationColor = "0x009DF9"
 
         const Embed1 = new Discord.MessageEmbed()
-            .setTitle(`${emoji(`${WarnEmoji}`)}` + " **COMMAND INFO**")
+            .setTitle(`${emoji(`${InformationEmoji}`)}` + " **COMMAND INFO**")
             .addField("COMMAND", "```8ball```", true)
             .addField("PERMISSIONS", "```None```", true)
             .addField("USAGE", "```>8ball <message>```", true)
             .addField("DESCRIPTION", "```Randomizes a response from 20 different messages from the real 8ball.```", true)
-            .setColor(WarnColor)
+            .setColor(InformationColor)
 
         let questions = message.content.slice(bot.prefix.length + 6)
 
@@ -58,15 +58,15 @@ module.exports = {
             const Embed2 = new Discord.MessageEmbed()
                 .setTitle("**DIGITAL MAGIC 8-BALL**")
                 .setDescription("```" + `${response}` + "```")
-                .setColor(0x000000)
+                .setColor(0xFFFFFF)
 
             message.channel.send(Embed2)
                 .catch(err => {
                     if (err) {
                         const ConsoleEmbed = new Discord.MessageEmbed()
-                            .setTitle(`${emoji(`${AdminNotificationEmoji}`)}` + " **TERMINAL ERROR**")
+                            .setTitle(`${emoji(`${ErrorEmoji}`)}` + " **TERMINAL ERROR**")
                             .setDescription("```" + `${err}` + "```")
-                            .setColor(AdminNotificationColor)
+                            .setColor(ErrorColor)
 
                         return message.channel.send(ConsoleEmbed)
                     }
