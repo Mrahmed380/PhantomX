@@ -17,7 +17,7 @@ module.exports = {
 
         const InformationEmoji = "738675785098854480"
         const InformationColor = "0x009DF9"
-        
+
         var time = bot.uptime
 
         function dhm(ms) {
