@@ -66,7 +66,7 @@ module.exports = {
         }
 
         if (rMember.hasPermission("ADMINISTRATOR")) {
-            return message.channel.send(Embed3);
+            return message.channel.send(Embed7);
         }
 
         const Channel = message.guild.channels.cache.find(c => c.name === "reports" || c.name === "🔒│reports");
