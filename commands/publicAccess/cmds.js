@@ -20,6 +20,7 @@ module.exports = {
 
         const Embed1 = new Discord.MessageEmbed()
             .setTitle(`${emoji(`${InformationEmoji}`)}` + " **COMMANDS LIST**")
+            .addField("test", test)
             .setColor(InformationColor)
 
         const Embed2 = new Discord.MessageEmbed()
