@@ -52,7 +52,7 @@ module.exports = {
         }
 
         const Embed4 = new Discord.MessageEmbed()
-            .setTitle("**ANNOUNCEMENT**")
+            .setTitle(`**ANNOUNCEMENT FROM **`)
             .setDescription(`${announcement}`)
             .setFooter(`Created by ${message.author.username}.`)
             .setColor(0xFAFAFA)
