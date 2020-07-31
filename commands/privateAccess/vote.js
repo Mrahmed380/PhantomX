@@ -35,7 +35,7 @@ module.exports = {
             .setDescription("```" + `Missing argument: message` + "```")
             .setColor(ErrorColor)
 
-        const Embed4 = new Discord.MessageEmbed()
+        const Embed5 = new Discord.MessageEmbed()
             .setTitle(`${emoji(`${ErrorEmoji}`)}` + " **ERROR**")
             .setDescription("```" + `Missing permission.` + "```")
             .setColor(ErrorColor)
@@ -47,7 +47,7 @@ module.exports = {
         }
 
         if (!args[0]) {
-            return message.channel.send(Embed1)
+            return message.channel.send(Embed5)
         }
 
         if (!channel) {
