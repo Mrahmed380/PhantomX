@@ -98,7 +98,7 @@ module.exports = {
             .setTitle(`${emoji(`${InformationEmoji}`)}` + " **BAN AUTHORIZATION**")
             .setColor(InformationColor)
             .setDescription("*Verification expires in 60 seconds.*")
-            .addField("USER:", `${toBan}, ${toBan.id}`)
+            .addField("USER:", `${toBan.tag}`)
             .setFooter("You must have the ADMINISTRATOR permission.")
 
         await message.channel.send(promptEmbed).then(async msg => {
