@@ -99,7 +99,7 @@ module.exports = {
             .setColor(InformationColor)
             .setDescription("*Verification expires in 60 seconds.*")
             .addField("USER:", `${toBan.tag}`)
-            .setFooter("You must have the ADMINISTRATOR permission.")
+            .setFooter("Only the author can take action.")
 
         await message.channel.send(promptEmbed).then(async msg => {
             const emoji = await promptMessage(msg, message.author, 60, ["✅", "❎"]);
