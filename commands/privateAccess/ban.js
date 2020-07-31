@@ -105,7 +105,7 @@ module.exports = {
         await message.channel.send(promptEmbed).then(async msg => {
             const emoji = await promptMessage(msg, message.author, 60, ["<:Success_Phantomizer:738675745693630474>", "738675252246085691"]);
 
-            if (emoji === "738675745693630474") {
+            if (emoji === "<:Success_Phantomizer:738675745693630474>") {
 
                 toBan.ban(args.slice(1).join(" "))
                 message.channel.send(Embed8)
