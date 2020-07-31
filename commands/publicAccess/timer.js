@@ -38,6 +38,7 @@ module.exports = {
 
         const Embed4 = new Discord.MessageEmbed()
             .setTitle(`${emoji(`${NotificationEmoji}`)}` + " **ALARM**")
+            .setThumbnail(message.author.displayAvatarURL({ dynamic: true, format: "png" }))
             .setDescription("Your timer finished")
             .setColor(NotificationColor)
 
