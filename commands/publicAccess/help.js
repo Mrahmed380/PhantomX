@@ -20,7 +20,7 @@ module.exports = {
             
         const Embed = new Discord.MessageEmbed()
             .setTitle("**HELP**")
-            .setThumbnail(bot.iamgeURL)
+            .setThumbnail(bot.imageURL)
             .addField("INVITE: https://discord.com/oauth2/authorize?client_id=696017289044164648&permissions=8&scope=bot", `\u200b`)
             .addField("COMMANDS: Say `>cmds` to view all the commands", `\u200b`)
             .addField("PREFIX: `>`", `\u200b`)
