@@ -22,8 +22,8 @@ module.exports = {
             .setTitle(`${emoji(`${InformationEmoji}`)}` + " **COMMAND INFO**")
             .addField("COMMAND", "```Timer```", true)
             .addField("PERMISSIONS", "```None```", true)
-            .addField("USAGE", "```>8ball <message>```", true)
-            .addField("DESCRIPTION", "```Randomizes a response from 20 different messages from the real 8ball.```", true)
+            .addField("USAGE", "```>timer <time>```", true)
+            .addField("DESCRIPTION", "```Creates a timer. The time should be something like '10s'.``", true)
             .setColor(InformationColor)
 
         let Timer = args[0];
