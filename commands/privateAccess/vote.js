@@ -35,9 +35,9 @@ module.exports = {
             .setDescription("```" + `Missing argument: message` + "```")
             .setColor(ErrorColor)
 
-            const Embed4 = new Discord.MessageEmbed()
+        const Embed4 = new Discord.MessageEmbed()
             .setTitle(`${emoji(`${ErrorEmoji}`)}` + " **ERROR**")
-            .setDescription("```" + `Missing argument: message` + "```")
+            .setDescription("```" + `Missing permission` + "```")
             .setColor(ErrorColor)
 
         const channel = message.mentions.channels.first() || message.guild.channels.cache.get(args[0])
