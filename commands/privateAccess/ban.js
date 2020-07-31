@@ -99,7 +99,7 @@ module.exports = {
             .setThumbnail(message.author.displayAvatarURL({ dynamic: true, format: "png" }))
             .setColor(InformationColor)
             .setDescription("*Verification expires in 60 seconds.*")
-            .addField("USER:", `${toBan.username}`)
+            .addField("USER:", `${toBan}`)
             .setFooter("Only the author can take action.")
 
         await message.channel.send(promptEmbed).then(async msg => {
