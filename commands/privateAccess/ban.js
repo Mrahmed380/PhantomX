@@ -102,9 +102,10 @@ module.exports = {
             .setFooter("Only the author can take action.")
 
         await message.channel.send(promptEmbed).then(async msg => {
-            const emoji = await promptMessage(msg, message.author, 60, ["✅", "738675252246085691"]);
+            const Check = "738675745693630474"
+            const emoji = await promptMessage(msg, message.author, 60, [`${Check}`, "738675252246085691"]);
 
-            if (emoji === "✅") {
+            if (emoji === "738675745693630474") {
 
                 toBan.ban(args.slice(1).join(" "))
                 message.channel.send(Embed8)
