@@ -38,7 +38,7 @@ module.exports = {
         const Field3 = ["Rock", "Jass", "Rap,", "Hip Hop", "Heavy Metal", "Reggae", "Classic", "Dubstep", "Electro Swing", "Electronic"]
         const RandomField3 = Field3[Math.floor(Math.random() * Field3.length)];
 
-        const Field4 = ["Satan", "Executioner", "Be-header", "Afton", "Serial Killer", "Zach Nolan", "Jeff The Killer", "Man Behind the Slaughter", "Demon", "Phantom"]
+        const Field4 = ["Satan", "Executioner", "Be-header", "Purple Guy", "Serial Killer", "Zach Nolan", "Jeff The Killer", "Man Behind the Slaughter", "Demon", "Phantom"]
         const RandomField4 = Field4[Math.floor(Math.random() * Field4.length)];
 
         const Field5 = ["Satanic", "Ritual", "Billie Eylish", "Dying noises"]
