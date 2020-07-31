@@ -30,12 +30,12 @@ module.exports = {
 
         const Embed2 = new Discord.MessageEmbed()
             .setTitle(`${emoji(`${ErrorEmoji}`)}` + " **ERROR**")
-            .setDescription("```" + `Missing input: Reason` + "```")
+            .setDescription("```" + `Missing input: reason` + "```")
             .setColor(ErrorColor)
 
         const Embed3 = new Discord.MessageEmbed()
             .setTitle(`${emoji(`${ErrorEmoji}`)}` + " **ERROR**")
-            .setDescription("```" + `Missing permission: ADMINISTRATOR` + "```")
+            .setDescription("```" + `Missing permission.` + "```")
             .setColor(ErrorColor)
 
         const Embed4 = new Discord.MessageEmbed()
