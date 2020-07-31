@@ -33,11 +33,10 @@ module.exports = {
             const Emoji = await promptMessage(msg, message.author, time, ["➡️"]);
 
             if (Emoji === "➡️") {
-                let msg = await message.channel.send(        const Embed2 = new Discord.MessageEmbed()
-                );
+                let msg = await message.channel.send(Embed2);
 
                 message.reactions.removeAll().then(async msg => {
-                    message.edit(privateCommandsImage)
+                    message.edit(Embed2)
                 }, 100)
             }
         });
