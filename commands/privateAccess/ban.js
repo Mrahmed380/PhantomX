@@ -25,8 +25,7 @@ module.exports = {
             .addField("PERMISSIONS", "```Administrator```", true)
             .addField("USAGE", "```>ban @user <message>```", true)
             .addField("DESCRIPTION", "```Bans a specified user and attaches a message.```", true)
-            .setColor(Informationcolor
-                )
+            .setColor(InformationColor)
 
         const Embed2 = new Discord.MessageEmbed()
             .setTitle(`${emoji(`${ErrorEmoji}`)}` + " **ERROR**")
