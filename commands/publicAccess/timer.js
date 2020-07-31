@@ -23,7 +23,7 @@ module.exports = {
             .addField("COMMAND", "```Timer```", true)
             .addField("PERMISSIONS", "```None```", true)
             .addField("USAGE", "```>timer <time>```", true)
-            .addField("DESCRIPTION", "```Creates a timer. The time should be something like '10s'.``", true)
+            .addField("DESCRIPTION", "```Creates a timer. The time should be something like '10s'.```", true)
             .setColor(InformationColor)
 
         let Timer = args[0];
