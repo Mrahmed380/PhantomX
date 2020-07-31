@@ -20,9 +20,9 @@ module.exports = {
             
         const Embed = new Discord.MessageEmbed()
             .setTitle("**HELP**")
+            .addField("**INVITE**", "`https://discord.com/oauth2/authorize?client_id=696017289044164648&permissions=8&scope=bot`", true)
             .addField("**COMMANDS**", "```Say '>commands' to view all the commands.```", true)
             .addField("**PREFIX**", "```>```", true)
-            .addField("**INVITE**", "`https://discord.com/oauth2/authorize?client_id=696017289044164648&permissions=8&scope=bot`", true)
             .setColor(0xFAFAFA);
 
         message.author.send(Embed)
