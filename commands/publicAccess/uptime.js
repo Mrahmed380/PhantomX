@@ -21,8 +21,8 @@ module.exports = {
         const Embed = new Discord.MessageEmbed()
             .setTitle("**UPTIME**")
             .setThumbnail(message.author.displayAvatarURL({ dynamic: true, format: "png" }))
-            .setColor(0xFAFAFA)
             .addField(`**UPTIME: **`, "```" + `${dhm(time)}` + "```")
+            .setColor(0xFAFAFA)
 
         message.channel.send(Embed)
             .catch(err => {
