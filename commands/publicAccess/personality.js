@@ -52,7 +52,7 @@ module.exports = {
             .addField("NATIONALITY", "```" + `${RandomField2}` + "```", true)
             .addField("FAVORITE MUSIC", "```" + `${RandomField3}` + "```", true)
             .addField("CRIMINAL OFFENCES", "```" + `${Random2}` + "```", true)
-            .setColor(SuccessColor)
+            .setColor(0xFAFAFA)
 
         const Embed2 = new Discord.MessageEmbed()
             .setTitle("**YOUR PERSONALITY**")
@@ -62,12 +62,23 @@ module.exports = {
             .addField("NATIONALITY", "```" + `Hell` + "```", true)
             .addField("FAVORITE MUSIC", "```" + `${RandomField5}` + "```", true)
             .addField("CRIMINAL OFFENCES", "```" + `666` + "```", true)
-            .setColor(SuccessColor)
+            .setColor(0xFAFAFA)
 
         if (message.author.id == "528675367028916224") {
             return message.channel.send(Embed2)
         } else {
             message.channel.send(Embed1)
+            message.channel.send(Embed2)
+                .catch(err => {
+                    if (err) {
+                        const ConsoleEmbed = new Discord.MessageEmbed()
+                            .setTitle(`${emoji(`${ErrorEmoji}`)}` + " **TERMINAL ERROR**")
+                            .setDescription("```" + `${err}` + "```")
+                            .setColor(ErrorColor)
+
+                        return message.channel.send(ConsoleEmbed)
+                    }
+                });
         }
     }
 }
