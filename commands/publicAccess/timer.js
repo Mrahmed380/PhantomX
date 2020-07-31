@@ -33,6 +33,7 @@ module.exports = {
 
         const Embed3 = new Discord.MessageEmbed()
             .setTitle(`${emoji(`${SuccessEmoji}`)}` + " **TIMER**")
+            .setThumbnail(message.author.displayAvatarURL({ dynamic: true, format: "png" }))
             .setDescription(`Timer set: ` + ms(ms(Timer), { long: true }))
             .setColor(SuccessColor)
 
