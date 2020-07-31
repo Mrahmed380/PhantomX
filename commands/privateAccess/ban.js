@@ -20,12 +20,13 @@ module.exports = {
         const InformationColor = "0x009DF9"
 
         const Embed1 = new Discord.MessageEmbed()
-            .setTitle(`${emoji(`${WarnEmoji}`)}` + " **COMMAND INFO**")
+            .setTitle(`${emoji(`${InformationEmoji}`)}` + " **COMMAND INFO**")
             .addField("COMMAND", "```Ban```", true)
             .addField("PERMISSIONS", "```Administrator```", true)
             .addField("USAGE", "```>ban @user <message>```", true)
             .addField("DESCRIPTION", "```Bans a specified user and attaches a message.```", true)
-            .setColor(WarnColor)
+            .setColor(Informationcolor
+                )
 
         const Embed2 = new Discord.MessageEmbed()
             .setTitle(`${emoji(`${ErrorEmoji}`)}` + " **ERROR**")
