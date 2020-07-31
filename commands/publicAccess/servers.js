@@ -33,7 +33,7 @@ module.exports = {
 
         const Embed = new Discord.MessageEmbed()
             .setColor(0xFFFAFA)
-            .setThumbnail(bot.imageURL)
+            .setThumbnail(bot.user.displayAvatarURL())
             .addField("SERVERS: ", "```" + `${bot.guilds.cache.size}` + "```", true)
 
         message.channel.send(Embed)
