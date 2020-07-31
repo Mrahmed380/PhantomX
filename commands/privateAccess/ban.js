@@ -62,12 +62,12 @@ module.exports = {
         const toBan = message.mentions.members.first() || message.guild.members.get(args[0]);
 
         const Embed8 = new Discord.MessageEmbed()
-            .setTitle(`${emoji(`${SuccessEmoji}`)}` + "**BAN**")
+            .setTitle(`${emoji(`${SuccessEmoji}`)}` + "**SUCCESS**")
             .setDescription("```" + `Successfully banned ${toBan}.` + "```")
             .setColor(SuccessColor)
 
         const Embed9 = new Discord.MessageEmbed()
-            .setTitle(`${emoji(`${ErrorEmoji}`)}` + " **BAN**")
+            .setTitle(`${emoji(`${ErrorEmoji}`)}` + " **ERROR**")
             .setDescription("```" + `Verification has expired.` + "```")
             .setFooter("You can no longer interact with the verification prompt.")
             .setColor(ErrorColor)
