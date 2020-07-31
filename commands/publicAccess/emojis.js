@@ -16,7 +16,7 @@ module.exports = {
 
         const InformationEmoji = "738675785098854480"
         const InformationColor = "0x009DF9"
-        
+
         let Emojis = ""
         let AnimatedEmojis = ""
         let EmojiCount = ""
@@ -46,9 +46,9 @@ module.exports = {
             .catch(err => {
                 if (err) {
                     const ConsoleEmbed = new Discord.MessageEmbed()
-                        .setTitle(`${emoji(`${AdminNotificationEmoji}`)}` + " **TERMINAL ERROR**")
+                        .setTitle(`${emoji(`${ErrorEmoji}`)}` + " **TERMINAL ERROR**")
                         .setDescription("```" + `${err}` + "```")
-                        .setColor(AdminNotificationColor)
+                        .setColor(ErrorColor)
 
                     return message.channel.send(ConsoleEmbed)
                 }
