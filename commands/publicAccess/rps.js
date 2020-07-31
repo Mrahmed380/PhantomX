@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const { promptMessage } = require("../../functions.js");
 const Messages1 = ["YOU WIN"];
 const Messages2 = ["TIED"];
-const Messages3 = ["YOU LOST"];
+const Messages3 = ["YOU LOSE"];
 const Options = ["⛰️", "🧾", "✂️"];
 
 module.exports = {
