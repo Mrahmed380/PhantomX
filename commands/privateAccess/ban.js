@@ -123,7 +123,7 @@ module.exports = {
                 const banChannel = message.guild.channels.cache.find(c => c.name === "logs");
                 banChannel.send(Embed5);
 
-            } else if (emoji === Emoji2) {
+            } else if (emoji === ":Error_Phantomizer") {
                 return message.channel.send(Embed7)
             }
 
