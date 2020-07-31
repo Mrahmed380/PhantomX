@@ -59,7 +59,7 @@ module.exports = {
                 }, 100)
             }
 
-            const msg2 = await message.channel.send(Embed2).then(async msg2 => {
+            const msg2 = await message.edit(Embed2).then(async msg2 => {
                 const Emoji2 = await promptMessage(msg2, message.author, time, ["⬅️"]);
 
                 if (Emoji2 === "⬅️") {
