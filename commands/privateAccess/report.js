@@ -19,12 +19,12 @@ module.exports = {
         const InformationColor = "0x009DF9"
 
         const Embed1 = new Discord.MessageEmbed()
-            .setTitle(`${emoji(`${WarnEmoji}`)}` + " **COMMAND INFO**")
+            .setTitle(`${emoji(`${InformationEmoji}`)}` + " **COMMAND INFO**")
             .addField("COMMAND", "```Report```", true)
             .addField("PERMISSIONS", "```Administrator```", true)
             .addField("USAGE", "```>report @user <message>```", true)
             .addField("DESCRIPTION", "```Sends an embed to the 'reports' channel and attaches a message.```", true)
-            .setColor(WarnColor)
+            .setColor(InformationColor)
 
         let rMember = message.mentions.members.first() || message.guild.members.cache.get(args[0]);
 
