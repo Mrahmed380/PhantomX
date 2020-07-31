@@ -40,6 +40,7 @@ module.exports = {
         if (!message.member.permissions.has("ADMINISTRATOR")) {
             return message.channel.send(Embed1)
         }
+        
         if (!channel) {
             return message.channel.send(Embed2)
         }
