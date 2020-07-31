@@ -5,7 +5,7 @@ module.exports = {
     category: "publicAccess",
     run: async (bot, message, args) => {
         const Embed = new Discord.MessageEmbed()
-            .setThumbnail(message.author.displayAvatarURL({ dynamic: true, format: "png" }))
+        .setThumbnail(bot.user.displayAvatarURL())
             .addField(`**PING **`, "```" + `${Math.round(bot.ws.ping)}` + " ms" + "```", true)
             .setColor(0xFAFAFA)
 
