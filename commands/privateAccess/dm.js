@@ -56,6 +56,7 @@ module.exports = {
 
         const Embed5 = new Discord.MessageEmbed()
             .setTitle(`**Direct Message from ${message.author.tag}**`)
+            .setThumbnail(message.author.displayAvatarURL({ dynamic: true, format: "png" }))
             .setDescription("```" + `${args.slice(1).join(" ")}` + "```")
             .setColor(0xFFFFFA)
 
