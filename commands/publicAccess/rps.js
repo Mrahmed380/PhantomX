@@ -23,9 +23,8 @@ module.exports = {
         const InformationColor = "0x009DF9"
 
         const Embed = new Discord.MessageEmbed()
-            .setColor(0x000000)
             .setTitle("**ROCK, PAPER, SCISSORS**")
-            .setTimestamp();
+            .setColor(0xFAFAFA)
 
         const m = await message.channel.send(Embed);
         const Reacted = await promptMessage(m, message.author, 30, Options);
