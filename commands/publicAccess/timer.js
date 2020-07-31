@@ -39,9 +39,9 @@ module.exports = {
             .setColor(SuccessColor)
 
         const Embed3 = new Discord.MessageEmbed()
-            .setTitle(`${emoji(`${InformationEmoji}`)}` + " **ALARM**")
+            .setTitle(`${emoji(`${InformationEmoji}`)}` + " **TIMER**")
             .setThumbnail(message.author.displayAvatarURL({ dynamic: true, format: "png" }))
-            .setDescription("Your timer has finished.")
+            .setDescription(`Your timer ${ms(ms(Timer), { long: true })} of has finished.`)
             .setColor(InformationColor)
 
         message.channel.send(Embed2)
