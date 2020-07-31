@@ -30,9 +30,9 @@ module.exports = {
             sec = Math.floor((minutesms) / (1000));
             return days + "d " + hours + "h " + minutes + "m " + sec + "s";
         }
-//
+        //
         const Embed = new Discord.MessageEmbed()
-            .setTitle("**SYSTEM STATUS**")
+            .setTitle("**MY STATUS**")
             .setColor(0xFAFAFA)
             .setDescription("**ONLINE**")
             .setThumbnail(bot.imageURL)
