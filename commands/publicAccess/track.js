@@ -19,12 +19,12 @@ module.exports = {
         const InformationColor = "0x009DF9"
 
         const Embed3 = new Discord.MessageEmbed()
-            .setTitle(`${emoji(`${WarnEmoji}`)}` + " **COMMAND INFO**")
+            .setTitle(`${emoji(`${InformationEmoji}`)}` + " **COMMAND INFO**")
             .addField("COMMAND", "```Track```", true)
             .addField("PERMISSIONS", "```None```", true)
             .addField("USAGE", "```>track @user```", true)
             .addField("DESCRIPTION", "```A whois command; Displays user information.```", true)
-            .setColor(WarnColor)
+            .setColor(InformationColor)
 
         if (!args[0]) {
             return message.channel.send(Embed3)
