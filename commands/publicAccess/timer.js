@@ -29,7 +29,7 @@ module.exports = {
         let Timer = args[0];
 
         if (!args[0]) {
-            return message.channel.send(Embed2)
+            return message.channel.send(Embed1)
         }
 
         const Embed2 = new Discord.MessageEmbed()
