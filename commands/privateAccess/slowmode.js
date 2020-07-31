@@ -25,6 +25,11 @@ module.exports = {
             .addField("DESCRIPTION", "```Sets a slowmode with the specified seconds. Alternate command is '>cooldown'.```", true)
             .setColor(InformationColor)
 
+        const Embed2 = new Discord.MessageEmbed()
+            .setTitle(`${emoji(`${ErrorEmoji}`)}` + " **ERROR**")
+            .setDescription("```" + `Missing argument: time` + "```")
+            .setColor(ErrorColor)
+            
         const Embed3 = new Discord.MessageEmbed()
             .setTitle(`${emoji(`${ErrorEmoji}`)}` + " **ERROR**")
             .setDescription("```" + `Missing permission.` + "```")
