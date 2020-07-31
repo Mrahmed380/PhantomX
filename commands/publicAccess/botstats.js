@@ -33,7 +33,7 @@ module.exports = {
 
         const Embed = new Discord.MessageEmbed()
             .setTitle("**BOT STATUS**")
-            .setColor(0xFFFAFA)
+            .setColor(0xFFFFA)
             .setDescription("**ONLINE**")
             .addField("VERSION: ", "```" + "4.7" + "```", true)
             .addField("\nPING: ", "```" + `${Math.round(bot.ws.ping)}` + "```", true)
