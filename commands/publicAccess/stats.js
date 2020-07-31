@@ -35,7 +35,7 @@ module.exports = {
             .setTitle("**MY STATUS**")
             .setColor(0xFAFAFA)
             .setDescription("**ONLINE**")
-            .setThumbnail(message.author.displayAvatarURL({ dynamic: true, format: "png" }))
+            .setThumbnail(bot.displayAvatarURL({ dynamic: true, format: "png" }))
             .setThumbnail(bot.imageURL)
             .addField("VERSION: ", "```" + "4.7" + "```", true)
             .addField("\nPING: ", "```" + `${Math.round(bot.ws.ping)}` + "```", true)
