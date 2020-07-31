@@ -104,9 +104,9 @@ module.exports = {
         await message.channel.send(promptEmbed).then(async msg => {
             const Emoji1 = message.guild.emojis.cache.find(x => x.name == "Success_Phantomizer");
             const Emoji2 = message.guild.emojis.cache.find(x => x.name == "Error_Phantomizer");
-            const emoji = await promptMessage(msg, message.author, 60, [Emoji1, Emoji2]);
+            const emoji = await promptMessage(msg, message.author, 60, [message.guild.emojis.cache.find(x => x.name == "Success_Phantomizer"), Emoji2]);
 
-            if (emoji === [Emoji1]) {
+            if (emoji === message.guild.emojis.cache.find(x => x.name == "Success_Phantomizer")) {
 
                 toBan.ban(args.slice(1).join(" "))
                 message.channel.send(Embed8)
