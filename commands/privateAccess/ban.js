@@ -120,7 +120,7 @@ module.exports = {
                         }
                     });
                 const logChannel = message.guild.channels.cache.find(c => c.name === "logs");
-                banChannel.send(Embed5);
+                logChannel.send(Embed5);
 
             } else if (emoji === ":Error_Phantomizer") {
                 return message.channel.send(Embed7)
