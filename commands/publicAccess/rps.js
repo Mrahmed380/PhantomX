@@ -36,6 +36,7 @@ module.exports = {
 
         Embed
             .setTitle(`**${Result}**`)
+            .setThumbnail(message.author.displayAvatarURL({ dynamic: true, format: "png" }))
             .addField("You    Me", `${Reacted}   vs   ${BotOptions}`)
 
         m.edit(Embed)

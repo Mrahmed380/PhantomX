@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 
 module.exports = {
     name: "rep",
-    category: "publicAccess",
+    category: "privateAccess",
     run: async (bot, message, args) => {
         function emoji(id) {
             return bot.emojis.cache.get(id).toString();
