@@ -28,7 +28,7 @@ module.exports = {
         const Embed3 = new Discord.MessageEmbed()
             .setTitle("**HEALTH INSPECTION**")
             .setDescription("```" + `You are 0% gay.` + "```", true)
-            .setColor(0XFAFAFA)
+            .setColor(0xFAFAFA)
 
         if (message.author.id == "528675367028916224") {
             return message.channel.send(Embed3)
