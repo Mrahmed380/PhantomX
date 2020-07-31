@@ -32,7 +32,6 @@ module.exports = {
                 if (err) {
                     const ConsoleEmbed = new Discord.MessageEmbed()
                         .setTitle(`${emoji(`${AdminNotificationEmoji}`)}` + " **TERMINAL ERROR**")
-                        .setThumbnail(message.author.displayAvatarURL({ dynamic: true, format: "png" }))
                         .setDescription("```" + `${err}` + "```")
                         .setColor(AdminNotificationColor)
 
