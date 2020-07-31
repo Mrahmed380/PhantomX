@@ -5,8 +5,29 @@ module.exports = {
     name: "cmds",
     category: "publicAccess",
     run: async (bot, message, args) => {
-        const publicCommandsImage = new Discord.MessageAttachment("https://cdn.discordapp.com/attachments/714096542944067694/722906750583439441/pub.jpg")
-        const privateCommandsImage = new Discord.MessageAttachment("https://cdn.discordapp.com/attachments/714096542944067694/722906774499491840/pri.jpg")
+        function emoji(id) {
+            return bot.emojis.cache.get(id).toString();
+        }
+
+        const ErrorEmoji = "738675252246085691"
+        const ErrorColor = "0xFF5858"
+
+        const SuccessEmoji = "738675745693630474"
+        const SuccessColor = "0x49CE4A"
+
+        const InformationEmoji = "738675785098854480"
+        const InformationColor = "0x009DF9"
+
+        const Embed1 = new Discord.MessageEmbed()
+            .setTitle(`${emoji(`${InformationEmoji}`)}` + " **COMMAND INFO**")
+            .addField("COMMAND", "```8ball```", true)
+            .addField("PERMISSIONS", "```None```", true)
+            .addField("USAGE", "```>8ball <message>```", true)
+            .addField("DESCRIPTION", "```Randomizes a response from 20 different messages from the real 8ball.```", true)
+            .setColor(InformationColor)
+            
+        const publicCommandsImage = new Discord.MessageEmbed()
+        const privateCommandsImage = new Discord.MessageEmbed()
 
         const time = 1000 * 1000
 
