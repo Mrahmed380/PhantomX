@@ -23,7 +23,7 @@ module.exports = {
             .addField("COMMAND", "```Track```", true)
             .addField("PERMISSIONS", "```None```", true)
             .addField("USAGE", "```>track @user```", true)
-            .addField("DESCRIPTION", "```A whois command; Displays user information.```", true)
+            .addField("DESCRIPTION", "```A whois command - Displays user information.```", true)
             .setColor(InformationColor)
 
         if (!args[0]) {
