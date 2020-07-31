@@ -33,7 +33,7 @@ module.exports = {
             const Emoji = await promptMessage(msg, message.author, time, ["➡️"]);
 
             if (Emoji === "➡️") {
-                let msg = await message.channel.send(Embed2);
+                let msg = await message.channel.send(Embed1);
 
                 message.reactions.removeAll().then(async msg => {
                     message.edit(Embed2)
