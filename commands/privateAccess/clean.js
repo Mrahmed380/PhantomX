@@ -34,7 +34,7 @@ module.exports = {
                         .setDescription("```" + `${err}` + "```")
                         .setColor(AdminNotificationColor)
 
-                    return message.channel.send(ConsoleEmbed)
+                    return message.channel.send(ErrorColor)
                 }
             });
     }
