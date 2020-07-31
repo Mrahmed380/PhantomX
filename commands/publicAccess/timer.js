@@ -39,7 +39,7 @@ module.exports = {
             .setTitle(`${emoji(`${NotificationEmoji}`)}` + " **ALARM**")
             .setThumbnail(message.author.displayAvatarURL({ dynamic: true, format: "png" }))
             .setDescription("Your timer finished")
-            .setColor(NotificationColor)
+            .setColor(InformationColor)
 
         message.channel.send(Embed3)
             .catch(err => {
