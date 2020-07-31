@@ -19,7 +19,7 @@ module.exports = {
 
         const Embed = new Discord.MessageEmbed()
             .setDescription("**SERVER INFORMATION**")
-            .setColor(0x000000)
+            .setColor(0xFAFAFA)
             .setThumbnail(message.author.displayAvatarURL({ dynamic: true, format: "png" }))
             .addField("**SERVER NAME:**", "```" + message.guild.name + "```", true)
             .addField("**SERVER OWNER:**", "```" + message.guild.owner.user.tag + "```", true)
