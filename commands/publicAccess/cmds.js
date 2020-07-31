@@ -25,17 +25,16 @@ module.exports = {
             .addField("USAGE", "```>8ball <message>```", true)
             .addField("DESCRIPTION", "```Randomizes a response from 20 different messages from the real 8ball.```", true)
             .setColor(InformationColor)
-            
-        const publicCommandsImage = new Discord.MessageEmbed()
-        const privateCommandsImage = new Discord.MessageEmbed()
+        const Embed2 = new Discord.MessageEmbed()
 
         const time = 1000 * 1000
 
-        const msg = await message.channel.send(publicCommandsImage).then(async msg => {
+        const msg = await message.channel.send(Embed1).then(async msg => {
             const Emoji = await promptMessage(msg, message.author, time, ["➡️"]);
 
             if (Emoji === "➡️") {
-                let msg = await message.channel.send(privateCommandsImage);
+                let msg = await message.channel.send(        const Embed2 = new Discord.MessageEmbed()
+                );
 
                 message.reactions.removeAll().then(async msg => {
                     message.edit(privateCommandsImage)
