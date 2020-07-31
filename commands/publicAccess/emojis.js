@@ -39,6 +39,7 @@ module.exports = {
 
         const Embed1 = new Discord.MessageEmbed()
             .setTitle("**EMOJIS**")
+            .setThumbnail(message.author.displayAvatarURL({ dynamic: true, format: "png" }))
             .setDescription(`**SERVER EMOJIS:** ${EmojiCount}\n${Emojis}\n\n**ANIMATED EMOJIS:** ${AnimatedEmojiCount}\n${AnimatedEmojis}\n\n**TOTAL SERVER EMOJIS:**` + "```" + ` ${TotalEmojis}` + "```", true)
             .setColor(0xFAFAFA)
 
