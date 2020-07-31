@@ -54,7 +54,7 @@ module.exports = {
             .setColor(ErrorColor)
 
         if (!message.member.hasPermission("ADMINISTRATOR")) {
-            return message.channel.send(Embed1)
+            return message.channel.send(Embed3)
         }
 
         if (!rMember) {
