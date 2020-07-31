@@ -60,12 +60,12 @@ module.exports = {
             }
         });
 
-        const msg2 = await message.channel.send(Embed1).then(async msg => {
-            const Emoji = await promptMessage(msg, message.author, time, ["⬅️"]);
+        const msg2 = await message.channel.send(Embed1).then(async msg2 => {
+            const Emoji = await promptMessage(msg2, message.author, time, ["⬅️"]);
 
             if (Emoji === "⬅️") {
 
-                msg2.reactions.removeAll().then(async msg => {
+                msg2.reactions.removeAll().then(async msg2 => {
                     msg.edit(Embed1)
                 }, 100)
             }
