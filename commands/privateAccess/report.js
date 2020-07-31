@@ -44,7 +44,7 @@ module.exports = {
             .setColor(ErrorColor)
 
         const Embed5 = new Discord.MessageEmbed()
-            .setTitle(`${emoji(`${SuccessEmoji}`)}` + " **REPORT COMMAND**")
+            .setTitle(`${emoji(`${SuccessEmoji}`)}` + " **SUCCESS**")
             .setDescription("```" + `Successfully reported ${rMember}.` + "```")
             .setColor(SuccessColor)
 
