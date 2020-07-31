@@ -18,6 +18,7 @@ module.exports = {
         const InformationColor = "0x009DF9"
 
         const Embed = new Discord.MessageEmbed()
+            .setThumbnail(message.author.displayAvatarURL({ dynamic: true, format: "png" }))
             .addField("**YOUR JOIN DATE:**", "```" + new Intl.DateTimeFormat("en-GB").format(message.member.joinedTimestamp) + "```", true)
             .setColor(0xFAFAFA)
 
