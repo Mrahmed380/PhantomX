@@ -55,7 +55,7 @@ module.exports = {
             .setTitle("**ANNOUNCEMENT**")
             .setDescription("```" + `${announcement}` + "```")
             .setFooter(`${message.author.username} created this announcement.`)
-            .setColor(0x000000)
+            .setColor(0xFAFAFA)
 
         let msg = await bot.channels.cache.get(channel.id).send(Embed4)
             .catch(err => {
