@@ -35,6 +35,7 @@ module.exports = {
             .setTitle("**SYSTEM STATUS**")
             .setColor(0xFAFAFA)
             .setDescription("**ONLINE**")
+            .setThumbnail(bot)
             .addField("VERSION: ", "```" + "4.7" + "```", true)
             .addField("\nPING: ", "```" + `${Math.round(bot.ws.ping)}` + "```", true)
             .addField("UPTIME: ", "```" + `${dhm(time)}` + "```", true)
