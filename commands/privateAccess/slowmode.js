@@ -27,7 +27,7 @@ module.exports = {
 
         const Embed3 = new Discord.MessageEmbed()
             .setTitle(`${emoji(`${ErrorEmoji}`)}` + " **ERROR**")
-            .setDescription("```" + `Missing permission: ADMINISTRATOR` + "```")
+            .setDescription("```" + `Missing permission.` + "```")
             .setColor(ErrorColor)
 
         if (!message.member.permissions.has("ADMINISTRATOR")) {
