@@ -20,7 +20,17 @@ module.exports = {
 
         const Embed1 = new Discord.MessageEmbed()
             .setTitle(`${emoji(`${InformationEmoji}`)}` + " **COMMANDS LIST**")
-            .addField("test", "**test**")
+            .addField("8ball", "**cmds**")
+            .addField("emojis", "**help**")
+            .addField("howgay", "**joindate**")
+            .addField("members", "**personality**")
+            .addField("ping", "**random**")
+            .addField("rep", "**rps**")
+            .addField("serverinfo", "**servers**")
+            .addField("stats", "**stonks**")
+            .addField("timer", "**track**")
+            .addField("uptime", "**version**")
+            .addField("weather", `\u200b`)
             .setColor(InformationColor)
 
         const Embed2 = new Discord.MessageEmbed()
