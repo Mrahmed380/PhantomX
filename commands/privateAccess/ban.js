@@ -67,7 +67,7 @@ module.exports = {
             .setColor(SuccessColor)
 
         const Embed9 = new Discord.MessageEmbed()
-            .setTitle(`${emoji(`${AdminNotificationEmoji}`)}` + " **BAN COMMAND**")
+            .setTitle(`${emoji(`${SuccessEmoji}`)}` + " **BAN**")
             .setDescription("```" + `Verification has expired.` + "```")
             .setFooter("You can no longer interact with the verification prompt.")
             .setColor(AdminNotificationColor)
