@@ -18,10 +18,13 @@ module.exports = {
         const InformationEmoji = "738675785098854480"
         const InformationColor = "0x009DF9"
 
-        const Embed2 = new Discord.MessageEmbed()
-            .setTitle(`${emoji(`${ErrorEmoji}`)}` + " **ERROR**")
-            .setDescription("```" + `Missing input: Time` + "```")
-            .setColor(ErrorColor)
+        const Embed1 = new Discord.MessageEmbed()
+            .setTitle(`${emoji(`${InformationEmoji}`)}` + " **COMMAND INFO**")
+            .addField("COMMAND", "```8ball```", true)
+            .addField("PERMISSIONS", "```None```", true)
+            .addField("USAGE", "```>8ball <message>```", true)
+            .addField("DESCRIPTION", "```Randomizes a response from 20 different messages from the real 8ball.```", true)
+            .setColor(InformationColor)
 
         let Timer = args[0];
 
@@ -29,7 +32,7 @@ module.exports = {
             return message.channel.send(Embed2)
         }
 
-        const Embed3 = new Discord.MessageEmbed()
+        const Embed2 = new Discord.MessageEmbed()
             .setTitle(`${emoji(`${SuccessEmoji}`)}` + " **TIMER**")
             .setThumbnail(message.author.displayAvatarURL({ dynamic: true, format: "png" }))
             .setDescription(`Timer set: ` + ms(ms(Timer), { long: true }))
