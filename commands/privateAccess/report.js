@@ -78,7 +78,7 @@ module.exports = {
         message.channel.send(Embed5)
 
         const Embed6 = new Discord.MessageEmbed()
-            .setAuthor("ADMIN REPORT", rMember.user.displayAvatarURL())
+            .setAuthor("REPORT", rMember.user.displayAvatarURL())
             .setThumbnail(message.author.displayAvatarURL({ dynamic: true, format: "png" }))
             .setTimestamp()
             .setColor(0x000000)
