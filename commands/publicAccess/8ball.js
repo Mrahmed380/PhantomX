@@ -25,7 +25,7 @@ module.exports = {
             .addField("DESCRIPTION", "```Randomizes a response from 20 different messages from the real 8ball.```", true)
             .setColor(InformationColor)
 
-        let questions = message.content.slice(bot.prefix.length + 6)
+        let questions = message.content.slice(bot.prefix.length + 6);
 
         if (!args[0]) {
             return message.channel.send(Embed1)
