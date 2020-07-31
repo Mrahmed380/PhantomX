@@ -36,7 +36,7 @@ module.exports = {
                 let msg = await message.channel.send(Embed1);
 
                 message.reactions.removeAll().then(async msg => {
-                    message.edit(Embed2)
+                    msg.edit(Embed2)
                 }, 100)
             }
         });
