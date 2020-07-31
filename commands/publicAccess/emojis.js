@@ -30,7 +30,7 @@ module.exports = {
         message.guild.emojis.cache.forEach(emoji => {
             TotalEmojis++;
             if (emoji.animated) {
-                AnimatedEmojis += Emojis(emoji.animated.id)
+                AnimatedEmojis += Emoji(emoji.animated.id)
             } else {
                 EmojiCount++;
                 Emojis += Emoji(emoji.id)
