@@ -18,7 +18,7 @@ module.exports = {
         const InformationColor = "0x009DF9"
 
         const Embed = new Discord.MessageEmbed()
-            .addField("**TOTAL MEMBERS:**", "```" + message.guild.memberCount + "```", true);
+            .addField("**TOTAL MEMBERS:**", "```" + message.guild.memberCount + "```", true)
             .setFooter("Bots are included.")
             .setColor(0xFAFAFA)
 
