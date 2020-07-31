@@ -55,16 +55,6 @@ module.exports = {
                         .setColor(AdminNotificationColor)
 
                     return message.channel.send(ConsoleEmbed)
-                        .catch(err => {
-                            if (err) {
-                                const ConsoleEmbed = new Discord.MessageEmbed()
-                                    .setTitle(`${emoji(`${ErrorEmoji}`)}` + " **TERMINAL ERROR**")
-                                    .setDescription("```" + `${err}` + "```")
-                                    .setColor(ErrorColor)
-
-                                return message.channel.send(ConsoleEmbed)
-                            }
-                        });
                 }
             });
     }
