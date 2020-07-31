@@ -40,7 +40,7 @@ module.exports = {
         const Embed1 = new Discord.MessageEmbed()
             .setTitle("**EMOJIS**")
             .setDescription(`**SERVER EMOJIS:** ${EmojiCount}\n${Emojis}\n\n**ANIMATED EMOJIS:** ${AnimatedEmojiCount}\n${AnimatedEmojis}\n\n**TOTAL SERVER EMOJIS:**` + "```" + ` ${TotalEmojis}` + "```", true)
-            .setColor(0x000000)
+            .setColor(0xFAFAFA)
 
         message.channel.send(Embed1)
             .catch(err => {

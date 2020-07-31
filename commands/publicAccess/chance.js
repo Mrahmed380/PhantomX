@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 
 module.exports = {
-    name: "random",
+    name: "chance",
     category: "publicAccess",
     run: async (bot, message, args) => {
         function emoji(id) {
@@ -30,23 +30,25 @@ module.exports = {
 
         if (!args[0]) {
             message.channel.send(Embed1)
+        } else {
+            const Embed2 = new Discord.MessageEmbed()
+                .setTitle("RANDOMIZER")
+                .setThumbnail(message.author.displayAvatarURL({ dynamic: true, format: "png" }))
+                .addField("YOUR RANDOM NUMBER", "```" + `${Random}` + "```")
+                .setFooter(`Randomized from 0-${args[0]}`)
+                .setColor(0xFAFAFA)
+
+            message.channel.send(Embed2)
+                .catch(err => {
+                    if (err) {
+                        const ConsoleEmbed = new Discord.MessageEmbed()
+                            .setTitle(`${emoji(`${ErrorEmoji}`)}` + " **TERMINAL ERROR**")
+                            .setDescription("```" + `${err}` + "```")
+                            .setColor(ErrorColor)
+
+                        return message.channel.send(ConsoleEmbed)
+                    }
+                });
         }
-
-        const Embed2 = new Discord.MessageEmbed()
-            .setTitle("RANDOMIZER")
-            .addField("YOUR RANDOM NUMBER", "```" + `${Random}` + "```")
-            .setFooter("")
-
-        message.channel.send(Embed2)
-            .catch(err => {
-                if (err) {
-                    const ConsoleEmbed = new Discord.MessageEmbed()
-                        .setTitle(`${emoji(`${ErrorEmoji}`)}` + " **TERMINAL ERROR**")
-                        .setDescription("```" + `${err}` + "```")
-                        .setColor(ErrorColor)
-
-                    return message.channel.send(ConsoleEmbed)
-                }
-            });
     }
 }
