@@ -82,10 +82,10 @@ module.exports = {
             .setThumbnail(message.author.displayAvatarURL({ dynamic: true, format: "png" }))
             .setTimestamp()
             .setColor(0x000000)
-            .setDescription(stripIndents`MEMBER: ${rMember} (${rMember.user.id})
-            REPORTED BY: ${message.member}, ${message.member.user.id}
-            REPORTED IN: ${message.channel}
-            REASON: ${args.slice(1).join(" ")}`);
+            .setDescription(stripIndents`**User:** ${rMember} (${rMember.user.id})
+            **Reported By:** ${message.member}, ${message.member.user.id}
+            **Reported In:** ${message.channel}
+            **Reason:** ${args.slice(1).join(" ")}`);
 
         return Channel.send(Embed6)
             .catch(err => {
