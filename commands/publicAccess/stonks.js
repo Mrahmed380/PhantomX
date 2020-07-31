@@ -17,7 +17,7 @@ module.exports = {
 
         const InformationEmoji = "738675785098854480"
         const InformationColor = "0x009DF9"
-        
+
         const subreddits = ["Stonks"];
         const random = subreddits[Math.floor(Math.random() * subreddits.length)];
 
@@ -31,8 +31,8 @@ module.exports = {
             .catch(err => {
                 if (err) {
                     const ConsoleEmbed = new Discord.MessageEmbed()
-                    
                         .setTitle(`${emoji(`${AdminNotificationEmoji}`)}` + " **TERMINAL ERROR**")
+                        .setThumbnail(message.author.displayAvatarURL({ dynamic: true, format: "png" }))
                         .setDescription("```" + `${err}` + "```")
                         .setColor(AdminNotificationColor)
 
