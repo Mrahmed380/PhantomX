@@ -41,7 +41,6 @@ module.exports = {
             .addField("UPTIME: ", "```" + `${dhm(time)}` + "```", true)
             .addField("SERVERS: ", "```" + `${bot.guilds.cache.size}` + "```", true)
             .addField("USERS: ", "```" + `${bot.users.cache.size}` + "```", true)
-            .addField("Updates: ", `\u200b`)
 
         message.channel.send(Embed)
             .catch(err => {
