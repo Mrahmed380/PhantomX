@@ -38,18 +38,18 @@ module.exports = {
             return message.channel.send(Embed2)
         }
 
-            let BotMessage = args.join(" ")
-            message.delete().catch();
-            message.channel.send(BotMessage)
-                .catch(err => {
-                    if (err) {
-                        const ConsoleEmbed = new Discord.MessageEmbed()
-                            .setTitle(`${emoji(`${ErrorEmoji}`)}` + " **TERMINAL ERROR**")
-                            .setDescription("```" + `${err}` + "```")
-                            .setColor(ErrorColor)
+        let BotMessage = args.join(" ")
+        message.delete().catch();
+        message.channel.send(BotMessage)
+            .catch(err => {
+                if (err) {
+                    const ConsoleEmbed = new Discord.MessageEmbed()
+                        .setTitle(`${emoji(`${ErrorEmoji}`)}` + " **TERMINAL ERROR**")
+                        .setDescription("```" + `${err}` + "```")
+                        .setColor(ErrorColor)
 
-                        return message.channel.send(ConsoleEmbed)
-                    }
-                });
-        }
+                    return message.channel.send(ConsoleEmbed)
+                }
+            });
     }
+}
