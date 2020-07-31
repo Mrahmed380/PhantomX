@@ -31,12 +31,12 @@ module.exports = {
 
         const Embed2 = new Discord.MessageEmbed()
             .setTitle(`${emoji(`${ErrorEmoji}`)}` + " **ERROR**")
-            .setDescription("```" + `Missing argument: Channel` + "```")
+            .setDescription("```" + `Missing argument: channel` + "```")
             .setColor(ErrorColor)
 
         const Embed3 = new Discord.MessageEmbed()
             .setTitle(`${emoji(`${ErrorEmoji}`)}` + " **ERROR**")
-            .setDescription("```" + `Missing input: Message` + "```")
+            .setDescription("```" + `Missing argument: message` + "```")
             .setColor(ErrorColor)
 
         const channel = message.mentions.channels.first() || message.guild.channels.cache.get(args[0])
