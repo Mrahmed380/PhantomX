@@ -35,8 +35,8 @@ module.exports = {
         await m.reactions.removeAll();
 
         Embed
-            .setTitle("GAME STATS")
-            .addField(Result, `${Reacted} vs ${BotOptions}`)
+            .setTitle(`${Result}`)
+            .addField(`${Reacted} vs ${BotOptions}`)
             .setFooter("You       Bot");
 
         m.edit(Embed)
