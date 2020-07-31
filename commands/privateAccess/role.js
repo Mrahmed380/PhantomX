@@ -27,13 +27,13 @@ module.exports = {
         }
 
         const Embed1 = new Discord.MessageEmbed()
-            .setTitle(`${emoji(`${WarnEmoji}`)}` + " **COMMAND INFO**")
+            .setTitle(`${emoji(`${InformationEmoji}`)}` + " **COMMAND INFO**")
             .addField("COMMAND", "```Role```", true)
             .addField("PERMISSIONS", "```Administrator```", true)
             .addField("USAGE 1", "```>role create <color> <name>```", true)
             .addField("USAGE 2", "```>role delete <name>```", true)
             .addField("DESCRIPTION", "```Creates or deletes a role. The color should be in this format: '0x123456'.```", true)
-            .setColor(WarnColor)
+            .setColor(InformationColor)
 
         const Embed2 = new Discord.MessageEmbed()
             .setTitle(`${emoji(`${ErrorEmoji}`)}` + " **ERROR**")
