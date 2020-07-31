@@ -18,8 +18,8 @@ module.exports = {
         const InformationColor = "0x009DF9"
 
         const Embed = new Discord.MessageEmbed()
+        .addField("**YOUR JOIN DATE:**", "```" + new Intl.DateTimeFormat("en-GB").format(message.member.joinedTimestamp) + "```", true)
             .setColor(0x000000)
-            .addField("**YOUR JOIN DATE:**", "```" + new Intl.DateTimeFormat("en-GB").format(message.member.joinedTimestamp) + "```", true)
 
         message.channel.send(Embed)
             .catch(err => {
