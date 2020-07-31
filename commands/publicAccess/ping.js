@@ -16,7 +16,7 @@ module.exports = {
 
         const InformationEmoji = "738675785098854480"
         const InformationColor = "0x009DF9"
-        
+
         const Embed = new Discord.MessageEmbed()
             .setThumbnail(bot.user.displayAvatarURL())
             .addField(`**PING **`, "```" + `${Math.round(bot.ws.ping)}` + " ms" + "```", true)
@@ -26,9 +26,9 @@ module.exports = {
             .catch(err => {
                 if (err) {
                     const ConsoleEmbed = new Discord.MessageEmbed()
-                        .setTitle(`${emoji(`${AdminNotificationEmoji}`)}` + " **TERMINAL ERROR**")
+                        .setTitle(`${emoji(`${ErrorEmoji}`)}` + " **TERMINAL ERROR**")
                         .setDescription("```" + `${err}` + "```")
-                        .setColor(AdminNotificationColor)
+                        .setColor(ErrorColor)
 
                     return message.channel.send(ConsoleEmbed)
                 }
