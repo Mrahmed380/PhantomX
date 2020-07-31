@@ -62,7 +62,7 @@ module.exports = {
         const toBan = message.mentions.members.first() || message.guild.members.get(args[0]);
 
         const Embed8 = new Discord.MessageEmbed()
-            .setTitle(`${emoji(`${AdminNotificationEmoji}`)}` + "**BAN COMMAND**")
+            .setTitle(`${emoji(`${SuccessEmoji}`)}` + "**BAN**")
             .setDescription("```" + `Successfully banned ${toBan}.` + "```")
             .setColor(SuccessColor)
 
