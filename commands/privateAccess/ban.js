@@ -102,7 +102,7 @@ module.exports = {
             .setFooter("Only the author can take action.")
 
         await message.channel.send(promptEmbed).then(async msg => {
-            const emoji = await promptMessage(msg, message.author, 60, [":Success_Phantomizer:", "❎"]);
+            const emoji = await promptMessage(msg, message.author, 60, ["738675745693630474", "❎"]);
 
             if (emoji === ":Success_Phantomizer:") {
 
