@@ -19,6 +19,7 @@ module.exports = {
 
         const Embed1 = new Discord.MessageEmbed()
             .setTitle(`${emoji(`${InformationEmoji}`)}` + " **COMMAND INFO**")
+            .setThumbnail(message.author.displayAvatarURL({ dynamic: true, format: "png" }))
             .addField("COMMAND", "```8ball```", true)
             .addField("PERMISSIONS", "```None```", true)
             .addField("USAGE", "```>8ball <message>```", true)

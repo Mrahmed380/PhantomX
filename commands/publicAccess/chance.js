@@ -22,7 +22,7 @@ module.exports = {
 
         const Embed1 = new Discord.MessageEmbed()
             .setTitle(`${emoji(`${InformationEmoji}`)}` + " **COMMAND INFO**")
-            .addField("COMMAND", "```Random```", true)
+            .addField("COMMAND", "```Chance```", true)
             .addField("PERMISSIONS", "```None```", true)
             .addField("USAGE", "```>random <number>```", true)
             .addField("DESCRIPTION", "```Picks a number from 0 to the number you have chosen.```", true)
@@ -34,9 +34,10 @@ module.exports = {
 
         const Embed2 = new Discord.MessageEmbed()
             .setTitle("RANDOMIZER")
-            .addField("RANDOM NUMBER")
+            .addField("YOUR RANDOM NUMBER", "```" + `${Random}` + "```")
+            .setFooter("")
 
-        message.channel.send(Random)
+        message.channel.send(Embed2)
             .catch(err => {
                 if (err) {
                     const ConsoleEmbed = new Discord.MessageEmbed()
