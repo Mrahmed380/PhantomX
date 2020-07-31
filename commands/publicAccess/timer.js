@@ -38,13 +38,13 @@ module.exports = {
             .setDescription(`Timer set: ` + ms(ms(Timer), { long: true }))
             .setColor(SuccessColor)
 
-        const Embed4 = new Discord.MessageEmbed()
+        const Embed3 = new Discord.MessageEmbed()
             .setTitle(`${emoji(`${InformationEmoji}`)}` + " **ALARM**")
             .setThumbnail(message.author.displayAvatarURL({ dynamic: true, format: "png" }))
             .setDescription("Your timer finished")
             .setColor(InformationColor)
 
-        message.channel.send(Embed3)
+        message.channel.send(Embed2)
             .catch(err => {
                 if (err) {
                     const ConsoleEmbed = new Discord.MessageEmbed()
