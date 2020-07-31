@@ -57,6 +57,7 @@ module.exports = {
 
             const Embed2 = new Discord.MessageEmbed()
                 .setTitle("**DIGITAL MAGIC 8-BALL**")
+                .setThumbnail(message.author.displayAvatarURL({ dynamic: true, format: "png" }))
                 .setDescription("```" + `${response}` + "```")
                 .setColor(0xFAFAFA)
 
