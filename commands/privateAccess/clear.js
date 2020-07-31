@@ -27,12 +27,12 @@ module.exports = {
         }
 
         const Embed2 = new Discord.MessageEmbed()
-            .setTitle(`${emoji(`${WarnEmoji}`)}` + " **COMMAND INFO**")
+            .setTitle(`${emoji(`${InformationEmoji}`)}` + " **COMMAND INFO**")
             .addField("COMMAND", "```Clear```", true)
             .addField("PERMISSIONS", "```Administrator```", true)
             .addField("USAGE", "```>clear <number>```", true)
             .addField("DESCRIPTION", "```Bulk-deletes a specified number of messages.```", true)
-            .setColor(WarnColor)
+            .setColor(InformationColor)
 
         if (!args[0]) {
             return message.channel.send(Embed2)
