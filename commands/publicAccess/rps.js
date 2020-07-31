@@ -36,8 +36,7 @@ module.exports = {
 
         Embed
             .setTitle(`${Result}`)
-            .addField(`${Reacted} vs ${BotOptions}`, `\u200b`)
-            .setFooter("You       Bot");
+            .addField("You       Bot", `${Reacted} vs ${BotOptions}`)
 
         m.edit(Embed)
             .catch(err => {
