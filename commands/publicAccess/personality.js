@@ -46,6 +46,7 @@ module.exports = {
 
         const Embed1 = new Discord.MessageEmbed()
             .setTitle("**YOUR PERSONALITY**")
+            .setThumbnail(message.author.displayAvatarURL({ dynamic: true, format: "png" }))
             .addField("FRIENDS", "```" + `${Random}` + "```", true)
             .addField("DEPRESSION", "```" + `${Random}%` + "```", true)
             .addField("DREAM JOB", "```" + `${RandomField1}` + "```", true)
@@ -56,6 +57,7 @@ module.exports = {
 
         const Embed2 = new Discord.MessageEmbed()
             .setTitle("**YOUR PERSONALITY**")
+            .setThumbnail(message.author.displayAvatarURL({ dynamic: true, format: "png" }))
             .addField("FRIENDS", "```" + `${Random3}` + "```", true)
             .addField("DEPRESSION", "```" + `${Random4}%` + "```", true)
             .addField("DREAM JOB", "```" + `${RandomField4}` + "```", true)
