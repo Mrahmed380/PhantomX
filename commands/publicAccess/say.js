@@ -18,12 +18,12 @@ module.exports = {
         const InformationColor = "0x009DF9"
 
         const Embed1 = new Discord.MessageEmbed()
-            .setTitle(`${emoji(`${WarnEmoji}`)}` + " **COMMAND INFO**")
+            .setTitle(`${emoji(`${InformationColor}`)}` + " **COMMAND INFO**")
             .addField("COMMAND", "```rep```", true)
             .addField("PERMISSIONS", "```None```", true)
             .addField("USAGE", "```>rep <message>```", true)
             .addField("DESCRIPTION", "```A 'say' command; Repeats whatever the user says.```", true)
-            .setColor(WarnColor)
+            .setColor(InformationEmoji)
 
         const Embed2 = new Discord.MessageEmbed()
             .setTitle(`${emoji(`${ErrorEmoji}`)}` + " **ERROR**")
