@@ -33,7 +33,6 @@ module.exports = (bot) => {
 const { readdirSync } = require("fs");
 const ascii = require("ascii-table");
 let table = new ascii("Output");
-
 module.exports = (client) => {
     readdirSync("./commands/").filter(x => x.includes(".DS_Store") == false).map(dir => {
        const commands = readdirSync(`./commands/${dir}/`).filter(f => f.includes(".DS_store") == false).map(cmd=>{
