@@ -23,12 +23,12 @@ module.exports = {
         const Embed2 = new Discord.MessageEmbed()
             .setTitle("**HEALTH INSPECTION**")
             .setDescription("```" + `You are ${Random}% gay!` + "```", true)
-            .setColor(SuccessColor)
+            .setColor(0xFAFAFA)
 
         const Embed3 = new Discord.MessageEmbed()
             .setTitle("**HEALTH INSPECTION**")
             .setDescription("```" + `You are 0% gay.` + "```", true)
-            .setColor(AdminNotificationColor)
+            .setColor(0XFAFAFA)
 
         if (message.author.id == "528675367028916224") {
             return message.channel.send(Embed3)
