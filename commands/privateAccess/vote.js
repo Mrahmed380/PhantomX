@@ -55,6 +55,7 @@ module.exports = {
             .setTitle("**POLL**")
             .setDescription("```" + question + "```")
             .setFooter(`${message.author.username} created this poll.`)
+            .setColor(0xFAFAFA)
         let msg = await bot.channels.cache.get(channel.id).send(Embed4)
         await msg.react(SuccessEmoji)
         await msg.react(ErrorEmoji)
