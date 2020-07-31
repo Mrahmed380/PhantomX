@@ -52,9 +52,8 @@ module.exports = {
         }
 
         const Embed4 = new Discord.MessageEmbed()
-            .setTitle(`**ANNOUNCEMENT FROM *${meessage.author.username}*`)
+            .setTitle(`**ANNOUNCEMENT FROM *${message.author.username}*`)
             .setDescription(`${announcement}`)
-            .setFooter(`Created by ${message.author.username}.`)
             .setColor(0xFAFAFA)
 
         let msg = await bot.channels.cache.get(channel.id).send(Embed4)
