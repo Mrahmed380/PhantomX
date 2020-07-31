@@ -20,10 +20,6 @@ module.exports = {
 
         const Embed1 = new Discord.MessageEmbed()
             .setTitle(`${emoji(`${InformationEmoji}`)}` + " **COMMAND INFO**")
-            .addField("COMMAND", "```8ball```", true)
-            .addField("PERMISSIONS", "```None```", true)
-            .addField("USAGE", "```>8ball <message>```", true)
-            .addField("DESCRIPTION", "```Randomizes a response from 20 different messages from the real 8ball.```", true)
             .setColor(InformationColor)
         const Embed2 = new Discord.MessageEmbed()
 
