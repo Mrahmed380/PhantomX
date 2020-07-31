@@ -122,7 +122,7 @@ module.exports = {
                 const logChannel = message.guild.channels.cache.find(c => c.name === "logs" || "🔒│logs");
                 logChannel.send(Embed5);
 
-            } else if (emoji === Embed2) {
+            } else if (emoji === Emoji2) {
                 return message.channel.send(Embed7)
             }
 
