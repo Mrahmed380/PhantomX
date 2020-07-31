@@ -20,7 +20,7 @@ module.exports = {
         const Embed1 = new Discord.MessageEmbed()
             .setTitle(`${emoji(`${InformationColor}`)}` + " **COMMAND INFO**")
             .addField("COMMAND", "```Say```", true)
-            .addField("PERMISSIONS", "```None```", true)
+            .addField("PERMISSIONS", "```ADMINISTRATOR```", true)
             .addField("USAGE", "```>say <message>```", true)
             .addField("DESCRIPTION", "```Repeats whatever the user says.```", true)
             .setColor(InformationEmoji)
