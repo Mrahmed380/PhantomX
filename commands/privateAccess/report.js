@@ -65,7 +65,7 @@ module.exports = {
             return message.channel.send(Embed2);
         }
 
-        if (rMember.hasPermission("ADMINISTRATOR") {
+        if (rMember.hasPermission("ADMINISTRATOR")) {
             return message.channel.send(Embed3);
         }
 
