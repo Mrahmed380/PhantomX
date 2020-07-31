@@ -62,7 +62,7 @@ module.exports = {
         }
 
         if (!args[0]) {
-            return message.channel.send(Embed2);
+            return message.channel.send(Embed1);
         }
 
         if (rMember.hasPermission("ADMINISTRATOR")) {
