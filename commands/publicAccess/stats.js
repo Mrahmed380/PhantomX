@@ -40,6 +40,7 @@ module.exports = {
             .addField("\nPING: ", "```" + `${Math.round(bot.ws.ping)}` + "```", true)
             .addField("UPTIME: ", "```" + `${dhm(time)}` + "```", true)
             .addField("SERVERS: ", "```" + `${bot.guilds.cache.size}` + "```", true)
+            .addField("USERS: ", "```" + `${bot.users.cache.size}` + "```", true)
             .addField("Updates: ", `\u200b`)
 
         message.channel.send(Embed)
