@@ -35,12 +35,17 @@ module.exports = {
             .setDescription("```" + `Missing argument: message` + "```")
             .setColor(ErrorColor)
 
+            const Embed4 = new Discord.MessageEmbed()
+            .setTitle(`${emoji(`${ErrorEmoji}`)}` + " **ERROR**")
+            .setDescription("```" + `Missing argument: message` + "```")
+            .setColor(ErrorColor)
+
         const channel = message.mentions.channels.first() || message.guild.channels.cache.get(args[0])
 
         if (!message.member.permissions.has("ADMINISTRATOR")) {
             return message.channel.send(Embed1)
         }
-        
+
         if (!channel) {
             return message.channel.send(Embed2)
         }
