@@ -43,11 +43,11 @@ module.exports = {
         const channel = message.mentions.channels.first() || message.guild.channels.cache.get(args[0])
 
         if (!message.member.permissions.has("ADMINISTRATOR")) {
-            return message.channel.send(Embed2)
+            return message.channel.send(Embed5)
         }
 
         if (!args[0]) {
-            return message.channel.send(Embed5)
+            return message.channel.send(Embed1)
         }
 
         if (!channel) {
