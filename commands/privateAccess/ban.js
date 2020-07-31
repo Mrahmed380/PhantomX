@@ -105,7 +105,7 @@ module.exports = {
             const Check = "738675745693630474"
             const emoji = await promptMessage(msg, message.author, 60, [`${Check}`, "738675252246085691"]);
 
-            if (emoji === "738675745693630474") {
+            if (emoji === `${Check}`) {
 
                 toBan.ban(args.slice(1).join(" "))
                 message.channel.send(Embed8)
