@@ -32,6 +32,10 @@ module.exports = {
             message.channel.send(Embed1)
         }
 
+        const Embed2 = new Discord.MessageEmbed()
+            .setTitle("RANDOMIZER")
+            .addField("RANDOM NUMBER")
+
         message.channel.send(Random)
             .catch(err => {
                 if (err) {
