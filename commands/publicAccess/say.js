@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 
 module.exports = {
-    name: "say",
+    name: "rep",
     category: "publicAccess",
     run: async (bot, message, args) => {
         function emoji(id) {
