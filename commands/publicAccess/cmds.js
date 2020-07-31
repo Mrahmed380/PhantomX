@@ -13,7 +13,7 @@ module.exports = {
         const msg = await message.channel.send(publicCommandsImage).then(async msg => {
             const Emoji = await promptMessage(msg, message.author, time, ["➡️"]);
 
-            if Emoji === "➡️") {
+            if (Emoji === "➡️") {
                 let msg = await message.channel.send(privateCommandsImage);
 
                 message.reactions.removeAll().then(async msg => {
