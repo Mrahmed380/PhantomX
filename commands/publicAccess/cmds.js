@@ -17,7 +17,7 @@ module.exports = {
                 let msg = await message.channel.send(privateCommandsImage);
 
                 message.reactions.removeAll().then(async msg => {
-                    message.edit(privateCommandsImage)
+                    message.channel.send(privateCommandsImage)
                 }, 100)
             }
         });
