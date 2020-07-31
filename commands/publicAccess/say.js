@@ -34,9 +34,6 @@ module.exports = {
             return message.channel.send(Embed1)
         }
 
-        if (message.author.id == "614003464162246656") {
-            return message.channel.send(Embed2)
-        } else {
             let BotMessage = args.join(" ")
             message.delete().catch();
             message.channel.send(BotMessage)
