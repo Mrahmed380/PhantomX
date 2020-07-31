@@ -18,6 +18,7 @@ module.exports = {
         const InformationColor = "0x009DF9"
 
         const Embed = new Discord.MessageEmbed()
+            .setThumbnail(message.author.displayAvatarURL({ dynamic: true, format: "png" }))
             .addField("**TOTAL MEMBERS IN THIS SERVER**", "```" + message.guild.memberCount + "```", true)
             .setFooter("Bots are included.")
             .setColor(0xFAFAFA)
