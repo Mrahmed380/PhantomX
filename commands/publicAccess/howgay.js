@@ -21,6 +21,16 @@ module.exports = {
             return message.channel.send(Embed3)
         } else {
             message.channel.send(Embed2)
+            .catch(err => {
+                if (err) {
+                    const ConsoleEmbed = new Discord.MessageEmbed()
+                        .setTitle(`${emoji(`${ErrorEmoji}`)}` + " **TERMINAL ERROR**")
+                        .setDescription("```" + `${err}` + "```")
+                        .setColor(ErrorColor)
+
+                    return message.channel.send(ConsoleEmbed)
+                }
+            });
         }
     }
 }
