@@ -5,7 +5,7 @@ module.exports = {
     category: "publicAccess",
     run: async (bot, message, args) => {
         const Embed = new Discord.MessageEmbed()
-            .addField(`**PING: **`, "```" + `${Math.round(bot.ws.ping)}` + " ms" + "```", true)
+            .addField(`**PING **`, "```" + `${Math.round(bot.ws.ping)}` + " ms" + "```", true)
             .setColor(0xFAFAFA)
 
         message.channel.send(Embed)
