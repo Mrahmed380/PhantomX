@@ -20,12 +20,12 @@ module.exports = {
         let user = message.mentions.members.first() || message.guild.members.cache.get(args[0])
 
         const Embed1 = new Discord.MessageEmbed()
-            .setTitle(`${emoji(`${WarnEmoji}`)}` + " **COMMAND INFO**")
+            .setTitle(`${emoji(`${InformationEmoji}`)}` + " **COMMAND INFO**")
             .addField("COMMAND", "```Dm```", true)
             .addField("PERMISSIONS", "```Administrator```", true)
             .addField("USAGE", "```>dm @user <message>```", true)
             .addField("DESCRIPTION", "```DM's the specified user a message from me.```", true)
-            .setColor(WarnColor)
+            .setColor(InformationColor)
 
         const Embed2 = new Discord.MessageEmbed()
             .setTitle(`${emoji(`${ErrorEmoji}`)}` + " **ERROR**")
@@ -60,5 +60,15 @@ module.exports = {
             .setColor(0xFFFFFA)
 
         user.user.send(Embed5)
+            .catch(err => {
+                if (err) {
+                    const ConsoleEmbed = new Discord.MessageEmbed()
+                        .setTitle(`${emoji(`${ErrorEmoji}`)}` + " **TERMINAL ERROR**")
+                        .setDescription("```" + `${err}` + "```")
+                        .setColor(ErrorColor)
+
+                    return message.channel.send(ConsoleEmbed)
+                }
+            });
     }
 }
