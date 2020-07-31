@@ -96,6 +96,7 @@ module.exports = {
 
         const promptEmbed = new Discord.MessageEmbed()
             .setTitle(`${emoji(`${InformationEmoji}`)}` + " **BAN AUTHORIZATION**")
+            .setThumbnail(message.author.displayAvatarURL({ dynamic: true, format: "png" }))
             .setColor(InformationColor)
             .setDescription("*Verification expires in 60 seconds.*")
             .addField("USER:", `${toBan.username}`)
