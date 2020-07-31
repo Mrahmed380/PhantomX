@@ -17,7 +17,7 @@ module.exports = {
 
         const InformationEmoji = "738675785098854480"
         const InformationColor = "0x009DF9"
-        
+            
         const Embed = new Discord.MessageEmbed()
             .setTitle("**HELP**")
             .addField("**DESCRIPTION**", "```I was made by Phantom and acts as his loyal servant.```", true)
