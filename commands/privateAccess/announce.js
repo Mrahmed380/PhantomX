@@ -53,7 +53,7 @@ module.exports = {
 
         const Embed4 = new Discord.MessageEmbed()
             .setTitle(`**New announcement from ${message.author.username}**`)
-            .setThumbnail(message.author.displayAvatarURL({ dynamic: true, format: "png" }))s
+            .setThumbnail(message.author.displayAvatarURL({ dynamic: true, format: "png" }))
             .setDescription(`${announcement}`)
             .setColor(0xFAFAFA)
 
