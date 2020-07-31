@@ -23,12 +23,12 @@ module.exports = {
             .setColor(ErrorColor)
 
         const Embed2 = new Discord.MessageEmbed()
-            .setTitle(`${emoji(`${WarnEmoji}`)}` + " **COMMAND INFO**")
+            .setTitle(`${emoji(`${InformationEmoji}`)}` + " **COMMAND INFO**")
             .addField("COMMAND", "```Announce```", true)
             .addField("PERMISSIONS", "```Administrator```", true)
             .addField("USAGE", "```>announce #channel <message>```", true)
             .addField("DESCRIPTION", "```Creates an announcement in the specified channel.```", true)
-            .setColor(WarnColor)
+            .setColor(InformationColor)
 
         const Embed3 = new Discord.MessageEmbed()
             .setTitle(`${emoji(`${ErrorEmoji}`)}` + " **ERROR**")
