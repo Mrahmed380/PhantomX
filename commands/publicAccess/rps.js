@@ -35,7 +35,7 @@ module.exports = {
         await m.reactions.removeAll();
 
         Embed
-            .setTitle(`${Result}`)
+            .setTitle(`**${Result}**`)
             .addField("You    Me", `${Reacted}   vs   ${BotOptions}`)
 
         m.edit(Embed)
