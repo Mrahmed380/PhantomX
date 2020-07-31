@@ -54,7 +54,7 @@ module.exports = {
         const Embed4 = new Discord.MessageEmbed()
             .setTitle("**ANNOUNCEMENT**")
             .setDescription("```" + `${announcement}` + "```")
-            .setFooter(`${message.author.username} created this announcement.`)
+            .setFooter(`Created by ${message.author.username}.`)
             .setColor(0xFAFAFA)
 
         let msg = await bot.channels.cache.get(channel.id).send(Embed4)
