@@ -29,7 +29,7 @@ module.exports = {
         const Number4 = 100
         const Random4 = Math.floor(Math.random() * 901) + Number4
 
-        const Field1 = ["Carpenter", "Engineer", "Housewife", "Manga Artist", "Slave", "President", "Cashier", "Manager", "Driver", "Plumber", "Electrician", "YouTuber", "Gold Digger"]
+        const Field1 = ["Carpenter", "Engineer", "Housewife", "Manga Artist", "Slave", "President", "Cashier", "Manager", "Driver", "Plumber", "Electrician", "YouTuber", "Gold Digger", "CEO", "Construction Worker"]
         const RandomField1 = Field1[Math.floor(Math.random() * Field1.length)];
 
         const Field2 = ["North American", "South American", "African", "European", "Australian", "Asian", "Antartican"]
