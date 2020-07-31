@@ -33,7 +33,7 @@ module.exports = {
 
         const Embed = new Discord.MessageEmbed()
             .setTitle("**BOT STATUS**")
-            .setColor(0xFFFAFA)
+            .setColor(0xFAFAFA)
             .setDescription("**ONLINE**")
             .addField("VERSION: ", "```" + "4.7" + "```", true)
             .addField("\nPING: ", "```" + `${Math.round(bot.ws.ping)}` + "```", true)
@@ -46,9 +46,9 @@ module.exports = {
             .catch(err => {
                 if (err) {
                     const ConsoleEmbed = new Discord.MessageEmbed()
-                        .setTitle(`${emoji(`${AdminNotificationEmoji}`)}` + " **TERMINAL ERROR**")
+                        .setTitle(`${emoji(`${ErrorEmoji}`)}` + " **TERMINAL ERROR**")
                         .setDescription("```" + `${err}` + "```")
-                        .setColor(AdminNotificationColor)
+                        .setColor(ErrorColor)
 
                     return message.channel.send(ConsoleEmbed)
                 }

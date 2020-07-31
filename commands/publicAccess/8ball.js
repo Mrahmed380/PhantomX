@@ -58,7 +58,7 @@ module.exports = {
             const Embed2 = new Discord.MessageEmbed()
                 .setTitle("**DIGITAL MAGIC 8-BALL**")
                 .setDescription("```" + `${response}` + "```")
-                .setColor(0xFFFAFA)
+                .setColor(0xFAFAFA)
 
             message.channel.send(Embed2)
                 .catch(err => {
