@@ -33,18 +33,7 @@ module.exports = {
 
         const Embed = new Discord.MessageEmbed()
             .addField(`**UPTIME: **`, "```" + `${dhm(time)}` + "```")
-            function emoji(id) {
-                return bot.emojis.cache.get(id).toString();
-            }
-    
-            const ErrorEmoji = "738675252246085691"
-            const ErrorColor = "0xFF5858"
-    
-            const SuccessEmoji = "738675745693630474"
-            const SuccessColor = "0x49CE4A"
-    
-            const InformationEmoji = "738675785098854480"
-            const InformationColor = "0x009DF9"
+            .setThumbnail(bot.user.displayAvatarURL())
             .setColor(0xFAFAFA)
 
         message.channel.send(Embed)
