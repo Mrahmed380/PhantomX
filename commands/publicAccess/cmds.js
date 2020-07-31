@@ -23,7 +23,7 @@ module.exports = {
             .setColor(InformationColor)
 
         const Embed2 = new Discord.MessageEmbed()
-            .setTitle(`${emoji(`${InformationEmoji}`)}` + " **COMMANDS**")
+            .setTitle(`${emoji(`${InformationEmoji}`)}` + " **COMMANDS LIST**")
             .setColor(InformationColor)
 
         const time = 1000 * 1000
