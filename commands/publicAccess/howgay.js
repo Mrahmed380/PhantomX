@@ -9,11 +9,13 @@ module.exports = {
 
         const Embed2 = new Discord.MessageEmbed()
             .setTitle("**HEALTH INSPECTION**")
+            .setThumbnail(message.author.displayAvatarURL({ dynamic: true, format: "png" }))
             .setDescription("```" + `You are ${Random}% gay!` + "```", true)
             .setColor(0xFAFAFA)
 
         const Embed3 = new Discord.MessageEmbed()
             .setTitle("**HEALTH INSPECTION**")
+            .setThumbnail(message.author.displayAvatarURL({ dynamic: true, format: "png" }))
             .setDescription("```" + `You are 0% gay.` + "```", true)
             .setColor(0xFAFAFA)
 
