@@ -44,7 +44,7 @@ module.exports = {
         const FirstUsername = FirstUser.user.username
         const FirstUsernameSplit = FirstUsername.split(FirstUsername.length + FirstUsername.length)
 
-        const SecondUser = message.mentions.users.map(user => {
+        const Users = message.mentions.users.map(user => {
             return user.username + "+" +  user.username
         });
         //const SecondUser = message.mentions.members.first(-1) || message.guild.members.cache.get(args[1])
@@ -61,7 +61,7 @@ module.exports = {
 
         const Embed = new Discord.MessageEmbed()
             .setTitle("NAME COMBINING MACHINE")
-            .setDescription(`${SecondUser} = ${SecondUser}`)
+            .setDescription(`${FirstUser} + ${SecondUser} = ${SecondUser}`)
             .setColor(0xFAFAFA)
 
         message.channel.send(Embed)
