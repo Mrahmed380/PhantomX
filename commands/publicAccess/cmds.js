@@ -20,8 +20,8 @@ module.exports = {
 
         const Embed1 = new Discord.MessageEmbed()
             .setTitle(`${emoji(`${InformationEmoji}`)}` + " **COMMANDS LIST**")
-            .addField("8ball", "**cmds**", true)
-            .addField("combine", "**emojis**", true)
+            .addField("8ball", "**chance**", true)
+            .addField("cmds", "**emojis**", true)
             .addField("howgay", "**joindate**", true)
             .addField("members", "**personality**", true)
             .addField("ping", "**random**", true)
