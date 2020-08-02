@@ -62,8 +62,9 @@ module.exports = {
         const toBan = message.mentions.members.first() || message.guild.members.get(args[0]);
 
         const Embed8 = new Discord.MessageEmbed()
-            .setTitle(`${emoji(`${SuccessEmoji}`)}` + "**SUCCESS**")
-            .setDescription("```" + `Successfully banned ${toBan}.` + "```")
+            .setTitle(`${emoji(`${SuccessEmoji}`)}` + " **SUCCESS**")
+            .setThumbnail(message.author.displayAvatarURL({ dynamic: true, format: "png" }))
+            .setDescription(`Successfully kicked ${toBan}`)
             .setColor(SuccessColor)
 
         const Embed9 = new Discord.MessageEmbed()
