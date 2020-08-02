@@ -1,6 +1,4 @@
 const Discord = require("discord.js");
-const { stripIndents } = require("common-tags");
-const { promptMessage } = require("../../functions.js");
 
 module.exports = {
     name: "combine",
@@ -57,7 +55,7 @@ module.exports = {
 
         const Embed = new Discord.MessageEmbed()
             .setTitle("NAME-COMBINING MACHINE")
-            .setDescription(`${FirstUser.user.username} + ${SecondUser2} = **${FirstUser.user.username.slice(FirstUser.user.username.length / 2)}${SecondUser2}**`)
+            .setDescription(`${FirstUser.user.username} + ${SecondUser} = **${FirstUser.user.username.slice(FirstUser.user.username.length / 2)}${SecondUser2}**`)
             .setColor(0xFAFAFA)
 
         message.channel.send(Embed)
