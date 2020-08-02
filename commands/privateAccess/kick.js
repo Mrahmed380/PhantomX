@@ -111,9 +111,9 @@ module.exports = {
                     .catch(err => {
                         if (err) {
                             const Embed6 = new Discord.MessageEmbed()
-                                .setTitle(`${emoji(`${AdminNotificationEmoji}`)}` + " **TERMINAL ERROR**")
+                                .setTitle(`${emoji(`${ErrorEmoji}`)}` + " **TERMINAL ERROR**")
                                 .setDescription("```" + `${err}` + "```")
-                                .setColor(AdminNotificationColor)
+                                .setColor(ErrorColor)
 
                             return message.channel.send(Embed6)
                         }
