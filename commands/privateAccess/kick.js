@@ -67,7 +67,7 @@ module.exports = {
             .setColor(SuccessColor)
 
         const Embed9 = new Discord.MessageEmbed()
-            .setTitle(`${emoji(`${InformationEmoji}`)}` + " **ERROR**")
+            .setTitle(`${emoji(`${}`)}` + " **ERROR**")
             .setDescription("```" + `Verification has expired.` + "```")
             .setFooter("You can no longer interact with the verification promp.t")
             .setColor(SuccessColor)
