@@ -48,6 +48,9 @@ module.exports = {
         const SecondUsername = SecondUser.member
         //const SecondUsernameSplit = SecondUsername.split(SecondUsername.length + FirstUsername.length)
 
+        const Users = message.mentions.users.map(user => {
+            return user.username + "+" +  user.username
+        });
         if (!FirstUser) {
             return message.channelsend(Embed2)
         }
