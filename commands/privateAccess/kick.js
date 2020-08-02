@@ -89,7 +89,7 @@ module.exports = {
             .setThumbnail(toKick.user.displayAvatarURL())
             .setFooter(message.member.displayName, message.author.displayAvatarURL())
             .setTimestamp()
-            .setTitle(`${emoji(`${InformationEmoji}`)}` + " KICK")
+            .setTitle(`${emoji(`${InformationEmoji}`)}` + " KICK COMMAND")
             .setDescription(stripIndents`**KICKED USER:** ${toKick} (${toKick.id})
             **KICKED BY:** ${message.member} (${message.member.id})
             **REASON:** ${args.slice(1).join(" ")}`);
