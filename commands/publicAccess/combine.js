@@ -45,7 +45,7 @@ module.exports = {
         const FirstUsernameSplit = FirstUsername.split(FirstUsername.length + FirstUsername.length)
 
         const SecondUser = message.mentions.users.map(user => {
-            return user.username / user.username
+            return user.username * user.username
         });
         //const SecondUser = message.mentions.members.first(-1) || message.guild.members.cache.get(args[1])
         const SecondUsername = SecondUser.member
