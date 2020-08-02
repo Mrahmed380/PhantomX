@@ -45,7 +45,7 @@ module.exports = {
         const Users = message.mentions.users.map(user => {
             return user.username
         })
-        const SecondUser2 = message.mentions.users.map(user => {
+        const SecondUser2 = SecondUser.map(user => {
             return user.username
         })
 
