@@ -47,6 +47,7 @@ module.exports = {
         const SecondUsername = SecondUser.user.username
 
         const FirstUsernameSplit = FirstUsername.split(FirstUsername.length / 2).join("")
+        const SecondUsernameSplit = FirstUsername.split(FirstUsername.length / 2).join("")
 
         if (!FirstUser) {
             return message.channelsend(Embed2)
@@ -58,7 +59,7 @@ module.exports = {
 
         const Embed = new Discord.MessageEmbed()
             .setTitle("NAME COMBINING MACHINE")
-            .setDescription(`${FirstUser} + ${SecondUser} = ${FirstUsername}${SecondUsername}`)
+            .setDescription(`${FirstUser} + ${SecondUser} = ${FirstUsernameSplit}${SecondUsername}`)
             .setColor(0xFAFAFA)
 
         message.channel.send(Embed)
