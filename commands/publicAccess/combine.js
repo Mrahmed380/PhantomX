@@ -40,7 +40,7 @@ module.exports = {
             return message.channel.send(Embed2)
         }
 
-        const FirstUser = message.mentions.members.first() || message.guild.members.get(args[0]);
+        const FirstUser = message.mentions.members.first(-1) || message.guild.members.get(args[0]);
         const SecondUser = message.mentions.members.first(1) || message.guild.members.get(args[1]);
 
         const Embed = new Discord.MessageEmbed()
