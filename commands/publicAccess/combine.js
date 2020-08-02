@@ -40,7 +40,7 @@ module.exports = {
             return message.channel.send(Embed2)
         }
 
-        const SecondUser = message.mentions.members.first(1) || message.guild.members.cache.get(args[1])
+        const SecondUser = message.mentions.members.first(-1) || message.guild.members.cache.get(args[1])
         const FirstUser = message.mentions.members.first() || message.guild.members.cache.get(args[0])
         //const FirstUsername = FirstUser.user.username
         //const SecondUsername = SecondUser.cache.user.id
