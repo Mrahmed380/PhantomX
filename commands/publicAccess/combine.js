@@ -50,11 +50,11 @@ module.exports = {
         })
 
         if (!FirstUser) {
-            return message.channelsend(Embed2)
+            return message.channel.send(Embed2)
         }
 
         if (!SecondUser) {
-            return message.channelsend(Embed2)
+            return message.channel.send(Embed2)
         }
 
         const Embed = new Discord.MessageEmbed()
