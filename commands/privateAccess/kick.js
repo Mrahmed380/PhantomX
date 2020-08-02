@@ -96,14 +96,9 @@ module.exports = {
 
         const promptEmbed = new Discord.MessageEmbed()
             .setTitle(`${emoji(`${InformationEmoji}`)}` + " **KICK AUTHORIZATION**")
-            .setColor(0XFAFAFA)
-            .setDescription("*Verification expires in 60 seconds.*")
-            .addField("USER:", `${toKick}, ${toKick.id}`)
-            .setFooter("You must have the ADMINISTRATOR permission.")
-            .setTitle(`${emoji(`${InformationEmoji}`)}` + " **KICK AUTHORIZATION**")
             .setThumbnail(message.author.displayAvatarURL({ dynamic: true, format: "png" }))
             .setColor(InformationColor)
-            .setDescription(`**USER:** ${toBan}`, `\u200b`)
+            .setDescription(`**USER:** ${toKick}`, `\u200b`)
             .setFooter("Only the author can take action.")
 
         await message.channel.send(promptEmbed).then(async msg => {
