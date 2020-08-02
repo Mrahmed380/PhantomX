@@ -63,7 +63,7 @@ module.exports = {
 
         const Embed8 = new Discord.MessageEmbed()
             .setTitle(`${emoji(`${SuccessEmoji}`)}` + " **SUCCESS**")
-            .setDescription("```" + `Successfully kicked ${toKick}.` + "```")
+            .setDescription(`Successfully kicked ${toKick}.`)
             .setColor(SuccessColor)
 
         const Embed9 = new Discord.MessageEmbed()
