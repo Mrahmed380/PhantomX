@@ -24,7 +24,7 @@ module.exports = {
             .addField("cmds", "**combine**", true)
             .addField("emojis", "**help**", true)
             .addField("howgay", "**joindate**", true)
-            .addField("members", "**random**", true)
+            .addField("members", "**personality**", true)
             .addField("rep", "**rps**", true)
             .addField("serverinfo", "**servers**", true)
             .addField("stats", "**stonks**", true)
