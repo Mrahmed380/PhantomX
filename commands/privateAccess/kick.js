@@ -20,12 +20,12 @@ module.exports = {
         const InformationColor = "0x009DF9"
 
         const Embed1 = new Discord.MessageEmbed()
-            .setTitle(`${emoji(`${WarnEmoji}`)}` + " **COMMAND INFO**")
+            .setTitle(`${emoji(`${InformationEmoji}`)}` + " **COMMAND INFO**")
             .addField("COMMAND", "```Kick```", true)
             .addField("PERMISSIONS", "```Administrator```", true)
             .addField("USAGE", "```>kick @user <message>```", true)
             .addField("DESCRIPTION", "```Kicks a specified user and attaches a message.```", true)
-            .setColor(WarnColor)
+            .setColor(InformationColor)
 
         const Embed2 = new Discord.MessageEmbed()
             .setTitle(`${emoji(`${ErrorEmoji}`)}` + " **ERROR**")
