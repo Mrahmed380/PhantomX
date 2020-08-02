@@ -100,6 +100,11 @@ module.exports = {
             .setDescription("*Verification expires in 60 seconds.*")
             .addField("USER:", `${toKick}, ${toKick.id}`)
             .setFooter("You must have the ADMINISTRATOR permission.")
+            .setTitle(`${emoji(`${InformationEmoji}`)}` + " **KICK AUTHORIZATION**")
+            .setThumbnail(message.author.displayAvatarURL({ dynamic: true, format: "png" }))
+            .setColor(InformationColor)
+            .setDescription(`**USER:** ${toBan}`, `\u200b`)
+            .setFooter("Only the author can take action.")
 
         await message.channel.send(promptEmbed).then(async msg => {
             const emoji = await promptMessage(msg, message.author, 60, ["✅", "❎"]);
