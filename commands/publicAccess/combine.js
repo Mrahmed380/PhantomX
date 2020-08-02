@@ -46,7 +46,7 @@ module.exports = {
             return user.user.username
         })
         const Users = message.mentions.users.map(user => {
-            return FirstUser.user.username.slice(5)user.username.slice(2)
+            return FirstUser.user.username.slice(5) user.username.slice(2)
         })
 
         if (!FirstUser) {
@@ -56,10 +56,10 @@ module.exports = {
         if (!SecondUser) {
             return message.channel.send(Embed2)
         }
-
+//Users.map(u => u).join("")
         const Embed = new Discord.MessageEmbed()
             .setTitle("NAME-COMBINING MACHINE")
-            .setDescription(`${FirstUser.user.username} + ${SecondUser2} = **${Users.map(u => u).join("")}**`)
+            .setDescription(`${FirstUser.user.username} + ${SecondUser2} = **${}**`)
             .setColor(0xFAFAFA)
 
         message.channel.send(Embed)
