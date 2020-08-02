@@ -105,7 +105,7 @@ module.exports = {
         await message.channel.send(promptEmbed).then(async msg => {
             const Emoji1 = message.guild.emojis.cache.find(x => x.id == 738675745693630474)
             const Emoji2 = message.guild.emojis.cache.find(x => x.name == "Error_Phantomizer")
-            const emoji = await promptMessage(msg, message.author, 60, ["✅", Emoji2])
+            const emoji = await promptMessage(msg, message.author, 60, ["✅", "❎"])
 
             if (emoji === "✅") {
                 toBan.ban(args.slice(1).join(" "))
