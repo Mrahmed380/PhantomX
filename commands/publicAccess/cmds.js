@@ -25,7 +25,7 @@ module.exports = {
             .addField("emojis", "**help**", true)
             .addField("howgay", "**joindate**", true)
             .addField("members", "**personality**", true)
-            .addField("rep", "**rps**", true)
+            .addField("ping", "**rps**", true)
             .addField("serverinfo", "**servers**", true)
             .addField("stats", "**stonks**", true)
             .addField("timer", "**track**", true)
