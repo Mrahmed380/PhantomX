@@ -44,7 +44,7 @@ module.exports = {
         const SecondUser = message.mentions.members.first(1) || message.guild.members.cache.get(args[1])
         const FirstUsername = FirstUser.user.username
         const SecondUsername = SecondUser.member
-        const FirstUsernameSplit = FirstUsername.content.slice(FirstUser.length / 2)
+        const FirstUsernameSplit = FirstUsername.slice(FirstUser.length / 2)
 
         if (!FirstUser) {
             return message.channelsend(Embed2)
