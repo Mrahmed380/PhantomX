@@ -42,6 +42,7 @@ module.exports = {
 
         const FirstUser = message.mentions.members.first() || message.guild.members.get(args[0]);
         const SecondUser = message.mentions.members.first(-1) || message.guild.members.get(args[1]);
+        const FirstUsername = FirstUser
 
         const Embed = new Discord.MessageEmbed()
             .setTitle("NAME COMBINING MACHINE")
