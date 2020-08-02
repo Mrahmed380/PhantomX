@@ -46,7 +46,7 @@ module.exports = {
             return user.username
         })
         const SecondUser2 = SecondUser.map(user => {
-            return user
+            return user.username
         })
 
         if (!FirstUser) {
@@ -59,7 +59,7 @@ module.exports = {
 
         const Embed = new Discord.MessageEmbed()
             .setTitle("NAME COMBINING MACHINE")
-            .setDescription(`**${FirstUser.user.username}** + **${SecondUser2.user.tag}** = ${Users.map(u => u).join("")}`)
+            .setDescription(`**${FirstUser.user.username}** + **${SecondUser2.user.username.userna}** = ${Users.map(u => u).join("")}`)
             .setColor(0xFAFAFA)
 
         message.channel.send(Embed)
