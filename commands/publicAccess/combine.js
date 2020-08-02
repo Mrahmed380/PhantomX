@@ -46,7 +46,7 @@ module.exports = {
             return user.username
         })
         const SecondUser2 = SecondUser.map(user => {
-            return user.username
+            return user.user.username
         })
 
         if (!FirstUser) {
