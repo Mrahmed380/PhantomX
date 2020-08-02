@@ -43,7 +43,7 @@ module.exports = {
         const FirstUser = message.mentions.members.first() || message.guild.members.cache.get(args[0])
         const SecondUser = message.mentions.members.first(1) || message.guild.members.cache.get(args[1])
         const FirstUsername = FirstUser.user.username
-        const SecondUsername = SecondUser.tag
+        const SecondUsername = SecondUser.user.user.name
         const FirstUsernameSplit = FirstUsername.slice(FirstUsername.length / 2)
 
         if (!FirstUser) {
