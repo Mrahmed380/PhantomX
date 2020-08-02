@@ -43,7 +43,7 @@ module.exports = {
             .setColor(ErrorColor)
 
         const Embed7 = new Discord.MessageEmbed()
-            .setTitle(`${emoji(`${AdminNotificationEmoji}`)}` + " **SUCCESS**")
+            .setTitle(`${emoji(`${SuccessEmoji}`)}` + " **SUCCESS**")
             .setDescription("```" + `Successfully aborted kick.` + "```")
             .setColor(SuccessColor)
 
