@@ -23,7 +23,7 @@ module.exports = {
             .addField("8ball", "**chance**", true)
             .addField("cmds", "**combine**", true)
             .addField("emojis", "**help**", true)
-            .addField("members", "**personality**", true)
+            .addField("howgay", "**joindate**", true)
             .addField("ping", "**random**", true)
             .addField("rep", "**rps**", true)
             .addField("serverinfo", "**servers**", true)
