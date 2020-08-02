@@ -21,7 +21,7 @@ module.exports = {
         const Embed = new Discord.MessageEmbed()
             .setTitle("**VERSION**")
             .setThumbnail(bot.user.displayAvatarURL())
-            .addField(`**VERSION: **`, "```" + "4.7" + "```")
+            .addField(`**VERSION: **`, "```" + "4.9" + "```")
             .setColor(0xFAFAFA)
 
         message.channel.send(Embed)
