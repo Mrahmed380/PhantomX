@@ -46,7 +46,7 @@ module.exports = {
             return user.user.username
         })
         const Users = message.mentions.users.map(user => {
-            return user.username.slice(2)
+            return FirstUser.user.username.slice(5)user.username.slice(2)
         })
 
         if (!FirstUser) {
