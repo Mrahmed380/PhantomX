@@ -45,7 +45,7 @@ module.exports = {
         const Users = message.mentions.users.map(user => {
             return FirstUser.username
         })
-        
+
         if (!FirstUser) {
             return message.channelsend(Embed2)
         }
