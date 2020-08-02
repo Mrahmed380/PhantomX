@@ -44,7 +44,7 @@ module.exports = {
 
         const SecondUser = message.mentions.members.first(-1) || message.guild.members.cache.get(args[1])
         const SecondUser2 = SecondUser.map(user => {
-            return user.user.username.slice(user.user.username.length / 200)
+            return user.user.username.length.slice(2)
         })
 
         if (!FirstUser) {
