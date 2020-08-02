@@ -85,7 +85,7 @@ module.exports = {
         }
 
         const Embed5 = new Discord.MessageEmbed()
-            .setColor(AdminNotificationColor)
+            .setColor(0xFAFAFA)
             .setThumbnail(toKick.user.displayAvatarURL())
             .setFooter(message.member.displayName, message.author.displayAvatarURL())
             .setTimestamp()
@@ -93,11 +93,10 @@ module.exports = {
             .setDescription(stripIndents`**KICKED USER:** ${toKick} (${toKick.id})
             **KICKED BY:** ${message.member} (${message.member.id})
             **REASON:** ${args.slice(1).join(" ")}`);
-            .setColor(0xFAFAFA)
 
         const promptEmbed = new Discord.MessageEmbed()
-        .setTitle(`${emoji(`${AdminNotificationEmoji}`)}` + " **KICK AUTHORIZATION**")
-        .setColor(AdminNotificationColor)
+        .setTitle(`${emoji(`${InformationEmoji}`)}` + " **KICK AUTHORIZATION**")
+        .setColor(0XFAFAFA)
         .setDescription("*Verification expires in 60 seconds.*")
         .addField("USER:", `${toKick}, ${toKick.id}`)
         .setFooter("You must have the ADMINISTRATOR permission.")
