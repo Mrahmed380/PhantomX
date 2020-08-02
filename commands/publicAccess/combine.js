@@ -41,12 +41,13 @@ module.exports = {
         }
 
         const FirstUser = message.mentions.members.first() || message.guild.members.cache.get(args[0])
-        const SecondUser = message.mentions.members.first(-1) || message.guild.members.cache.get(args[1])
         const SecondUser2 = SecondUser.map(user => {
             return user.user.username
         })
-        const Users = message.mentions.users.map(user => {
-            return user.username.slice(2)
+        
+        const SecondUser = message.mentions.members.first(-1) || message.guild.members.cache.get(args[1])
+        const SecondUser2 = SecondUser.map(user => {
+            return user.user.username
         })
 
         if (!FirstUser) {
@@ -56,7 +57,7 @@ module.exports = {
         if (!SecondUser) {
             return message.channel.send(Embed2)
         }
-//Users.map(u => u).join("")
+
         const Embed = new Discord.MessageEmbed()
             .setTitle("NAME-COMBINING MACHINE")
             .setDescription(`${FirstUser.user.username} + ${SecondUser2} = **${FirstUser.user.username.slice(2)}${SecondUser2.slice(2)}**`)
