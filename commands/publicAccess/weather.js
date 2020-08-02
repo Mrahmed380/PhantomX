@@ -26,9 +26,10 @@ module.exports = {
             .addField("DESCRIPTION", "```Displays the weather information on the specified place. (No continents/countries)```", true)
             .setColor(InformationColor)
 
-        {
+        if (!args[0]) {
+            return message.channel.send(Embed1)
+        } else {
             weather.find({ search: args.join(" "), degreeType: 'C' }, function (err, result) {
-                if (err) message.channel.send(Embed1);
 
                 var current = result[0].current;
                 var location = result[0].location;
