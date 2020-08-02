@@ -95,11 +95,11 @@ module.exports = {
             **REASON:** ${args.slice(1).join(" ")}`);
 
         const promptEmbed = new Discord.MessageEmbed()
-        .setTitle(`${emoji(`${InformationEmoji}`)}` + " **KICK AUTHORIZATION**")
-        .setColor(0XFAFAFA)
-        .setDescription("*Verification expires in 60 seconds.*")
-        .addField("USER:", `${toKick}, ${toKick.id}`)
-        .setFooter("You must have the ADMINISTRATOR permission.")
+            .setTitle(`${emoji(`${InformationEmoji}`)}` + " **KICK AUTHORIZATION**")
+            .setColor(0XFAFAFA)
+            .setDescription("*Verification expires in 60 seconds.*")
+            .addField("USER:", `${toKick}, ${toKick.id}`)
+            .setFooter("You must have the ADMINISTRATOR permission.")
 
         await message.channel.send(promptEmbed).then(async msg => {
             const emoji = await promptMessage(msg, message.author, 60, ["✅", "❎"]);
@@ -118,7 +118,7 @@ module.exports = {
                             return message.channel.send(Embed6)
                         }
                     });
-                const logChannel = message.guild.channels.cache.find(c => c.name === "logs")
+                const logChannel = message.guild.channels.cache.find(c => c.name === "logs" || "")
                 logChannel.send(Embed5);
 
             } else if (emoji === "❎") {
@@ -130,5 +130,5 @@ module.exports = {
             }
 
         });
-}
+    }
 };
