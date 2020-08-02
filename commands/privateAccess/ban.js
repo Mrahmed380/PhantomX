@@ -104,7 +104,7 @@ module.exports = {
         await message.channel.send(promptEmbed).then(async msg => {
             const Emoji1 = message.guild.emojis.cache.find(x => x.name == "Success_Phantomizer")
             const Emoji2 = message.guild.emojis.cache.find(x => x.name == "Error_Phantomizer")
-            const SecondUser2 = SecondUser.map(user => {
+            const Emojis = SecondUser.map(user => {
                 return user.user.username
             })
             const emoji = await promptMessage(msg, message.author, 60, [Emoji1, Emoji2])
