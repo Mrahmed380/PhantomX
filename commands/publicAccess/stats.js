@@ -36,7 +36,7 @@ module.exports = {
             .setColor(0xFAFAFA)
             .setDescription("**ONLINE**")
             .setThumbnail(bot.user.displayAvatarURL())
-            .addField("VERSION: ", "```" + "4.7" + "```", true)
+            .addField("VERSION: ", "```" + "4.9" + "```", true)
             .addField("\nPING: ", "```" + `${Math.round(bot.ws.ping)}` + "```", true)
             .addField("UPTIME: ", "```" + `${dhm(time)}` + "```", true)
             .addField("SERVERS: ", "```" + `${bot.guilds.cache.size}` + "```", true)
