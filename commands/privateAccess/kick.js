@@ -70,7 +70,7 @@ module.exports = {
             .setTitle(`${emoji(`${ErrorEmoji}`)}` + " **ERROR**")
             .setDescription("```" + `Verification has expired.` + "```")
             .setFooter("You can no longer interact with the verification promp.t")
-            .setColor(SuccessColor)
+            .setColor(ErrorColor)
 
         if (!toKick) {
             return message.channel.send(Embed1)
