@@ -41,11 +41,11 @@ module.exports = {
         }
 
         const FirstUser = message.mentions.members.first() || message.guild.members.get(args[0]);
-        const SecondUser = message.mentions.members.first() || message.guild.members.get(args[1]);
+        const SecondUser = message.mentions.members.first(1) || message.guild.members.get(args[1]);
 
         const Embed = new Discord.MessageEmbed()
             .setTitle("NAME COMBINING MACHINE")
-            .setDescription(`${FirstUser} + ${SecondUser} = ${FirstUser.user.username}${SecondUser.user.username}`)
+            .setDescription(`${FirstUser} + ${SecondUser} = ${FirstUser}${SecondUser}`)
             .setColor(0xFAFAFA)
 
         message.channel.send(Embed)
