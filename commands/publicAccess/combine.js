@@ -48,7 +48,7 @@ module.exports = {
             .setDescription(`${FirstUser} + ${SecondUser} = ${FirstUser.user.username}${SecondUser.user.username}`)
             .setColor(0xFAFAFA)
 
-        message.channel.send(Embed);
+        message.channel.send(Embed)
             .catch(err => {
                 if (err) {
                     const ConsoleEmbed = new Discord.MessageEmbed()
