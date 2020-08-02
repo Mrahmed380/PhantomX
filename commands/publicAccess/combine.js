@@ -55,7 +55,7 @@ module.exports = {
 
         const Embed = new Discord.MessageEmbed()
             .setTitle("NAME-COMBINING MACHINE")
-            .setDescription(`${FirstUser.user.username} + ${SecondUser} = **${FirstUser.user.username.slice(FirstUser.user.username.length / 2)}${SecondUser2}**`)
+            .setDescription(`${FirstUser.user.username} + ${SecondUser.user.username} = **${FirstUser.user.username.slice(FirstUser.user.username.length / 2)}${SecondUser2}**`)
             .setColor(0xFAFAFA)
 
         message.channel.send(Embed)
