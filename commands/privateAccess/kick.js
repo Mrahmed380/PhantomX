@@ -93,6 +93,7 @@ module.exports = {
             .setDescription(stripIndents`**KICKED USER:** ${toKick} (${toKick.id})
             **KICKED BY:** ${message.member} (${message.member.id})
             **REASON:** ${args.slice(1).join(" ")}`);
+            .setColor(0xFAFAFA)
 
         const promptEmbed = new Discord.MessageEmbed()
             .setTitle(`${emoji(`${AdminNotificationEmoji}`)}` + " **KICK AUTHORIZATION**")
