@@ -96,11 +96,11 @@ module.exports = {
             .setColor(0xFAFAFA)
 
         const promptEmbed = new Discord.MessageEmbed()
-            .setTitle(`${emoji(`${AdminNotificationEmoji}`)}` + " **KICK AUTHORIZATION**")
-            .setColor(AdminNotificationColor)
-            .setDescription("*Verification expires in 60 seconds.*")
-            .addField("USER:", `${toKick}, ${toKick.id}`)
-            .setFooter("You must have the ADMINISTRATOR permission.")
+        .setTitle(`${emoji(`${AdminNotificationEmoji}`)}` + " **KICK AUTHORIZATION**")
+        .setColor(AdminNotificationColor)
+        .setDescription("*Verification expires in 60 seconds.*")
+        .addField("USER:", `${toKick}, ${toKick.id}`)
+        .setFooter("You must have the ADMINISTRATOR permission.")
 
         await message.channel.send(promptEmbed).then(async msg => {
             const emoji = await promptMessage(msg, message.author, 60, ["✅", "❎"]);
@@ -131,5 +131,5 @@ module.exports = {
             }
 
         });
-    }
+}
 };
