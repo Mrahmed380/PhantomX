@@ -43,10 +43,11 @@ module.exports = {
         const FirstUser = message.mentions.members.first() || message.guild.members.get(args[0]);
         const SecondUser = message.mentions.members.first(-1) || message.guild.members.get(args[1]);
         const FirstUsername = FirstUser.user.username
+        const SecondUsername = SecondUser.user.usernames
 
         const Embed = new Discord.MessageEmbed()
             .setTitle("NAME COMBINING MACHINE")
-            .setDescription(`${FirstUser} + ${SecondUser} = ${FirstUser.user.username}${SecondUser}`)
+            .setDescription(`${FirstUser} + ${SecondUser} = ${FirstUsername}${SecondUsername}`)
             .setColor(0xFAFAFA)
 
         message.channel.send(Embed)
