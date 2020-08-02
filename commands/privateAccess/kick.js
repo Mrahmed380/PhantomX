@@ -62,12 +62,12 @@ module.exports = {
         const toKick = message.mentions.members.first() || message.guild.members.get(args[0]);
 
         const Embed8 = new Discord.MessageEmbed()
-            .setTitle(`${emoji(`${SuccessEmoji}`)}` + "**KICK COMMAND**")
+            .setTitle(`${emoji(`${SuccessEmoji}`)}` + "**SUCCESS**")
             .setDescription("```" + `Successfully kicked ${toKick}.` + "```")
             .setColor(SuccessColor)
 
         const Embed9 = new Discord.MessageEmbed()
-            .setTitle(`${emoji(`${AdminNotificationEmoji}`)}` + " **KICK COMMAND**")
+            .setTitle(`${emoji(`${AdminNotificationEmoji}`)}` + " **ERROR**")
             .setDescription("```" + `Verification has expired.` + "```")
             .setFooter("You can no longer interact with the verification promp.t")
             .setColor(SuccessColor)
