@@ -46,8 +46,13 @@ module.exports = {
         const SecondUsername = SecondUser.user.username
 
         if (!FirstUser) {
-            return message.channelsend()
+            return message.channelsend(Embed2)
         }
+
+        if (!FirstUser) {
+            return message.channelsend(Embed2)
+        }
+        
         const Embed = new Discord.MessageEmbed()
             .setTitle("NAME COMBINING MACHINE")
             .setDescription(`${FirstUser} + ${SecondUser} = ${FirstUsername}${SecondUsername}`)
