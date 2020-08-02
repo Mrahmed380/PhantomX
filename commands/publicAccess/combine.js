@@ -42,11 +42,11 @@ module.exports = {
 
         const FirstUser = message.mentions.members.first() || message.guild.members.cache.get(args[0])
         const SecondUser = message.mentions.members.first(-1) || message.guild.members.cache.get(args[1])
-        const Users = message.mentions.users.map(user => {
-            return user.username
-        })
         const SecondUser2 = SecondUser.map(user => {
             return user.user.username
+        })
+        const Users = message.mentions.users.map(user => {
+            return user.username
         })
 
         if (!FirstUser) {
