@@ -62,7 +62,7 @@ module.exports = {
         const toKick = message.mentions.members.first() || message.guild.members.get(args[0]);
 
         const Embed8 = new Discord.MessageEmbed()
-            .setTitle(`${emoji(`${SuccessEmoji}`)}` + "**SUCCESS**")
+            .setTitle(`${emoji(`${SuccessEmoji}`)}` + " **SUCCESS**")
             .setDescription("```" + `Successfully kicked ${toKick}.` + "```")
             .setColor(SuccessColor)
 
