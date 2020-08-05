@@ -24,7 +24,7 @@ module.exports = {
 
         const Embed2 = new Discord.MessageEmbed()
             .setTitle(`${emoji(`${InformationEmoji}`)}` + " **COMMAND INFO**")
-            
+
             .addField("COMMAND", "```Announce```", true)
             .addField("PERMISSIONS", "```Administrator```", true)
             .addField("USAGE", "```>announce #channel <message>```", true)
