@@ -20,7 +20,7 @@ module.exports = {
         const Embed1 = new Discord.MessageEmbed()
             .setTitle(`${emoji(`${InformationEmoji}`)}` + " **COMMAND INFO**")
             .addField("COMMAND", "```Vote```", true)
-            .addField("PERMISSIONS", "```Administrator```", true)
+            .addField("PERMISSIONS", "```MANAGE_MESSAGES```", true)
             .addField("USAGE", "```>vote #channel <message>```", true)
             .addField("DESCRIPTION", "```Sends an embed to the specified channel and attaches a message.```", true)
             .setColor(InformationColor)
@@ -37,12 +37,12 @@ module.exports = {
 
         const Embed5 = new Discord.MessageEmbed()
             .setTitle(`${emoji(`${ErrorEmoji}`)}` + " **ERROR**")
-            .setDescription("```" + `Missing permission.` + "```")
+            .setDescription("```" + `Missing permissions.` + "```")
             .setColor(ErrorColor)
 
         const channel = message.mentions.channels.first() || message.guild.channels.cache.get(args[0])
 
-        if (!message.member.permissions.has("ADMINISTRATOR")) {
+        if (!message.member.permissions.has("MANAGE_MESSAGES")) {
             return message.channel.send(Embed5)
         }
 

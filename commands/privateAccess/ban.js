@@ -22,7 +22,7 @@ module.exports = {
         const Embed1 = new Discord.MessageEmbed()
             .setTitle(`${emoji(`${InformationEmoji}`)}` + " **COMMAND INFO**")
             .addField("COMMAND", "```Ban```", true)
-            .addField("PERMISSIONS", "```Administrator```", true)
+            .addField("PERMISSIONS", "```MANAGE_MESSAGES```", true)
             .addField("USAGE", "```>ban @user <message>```", true)
             .addField("DESCRIPTION", "```Bans a specified user and attaches a message.```", true)
             .setColor(InformationColor)
@@ -55,7 +55,7 @@ module.exports = {
             return message.channel.send(Embed2)
         }
 
-        if (!message.member.hasPermission("ADMINISTRATOR")) {
+        if (!message.member.hasPermission("MANAGE_MESSAGES")) {
             return message.channel.send(Embed3)
         }
 

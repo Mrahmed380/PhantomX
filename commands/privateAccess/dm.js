@@ -22,7 +22,7 @@ module.exports = {
         const Embed1 = new Discord.MessageEmbed()
             .setTitle(`${emoji(`${InformationEmoji}`)}` + " **COMMAND INFO**")
             .addField("COMMAND", "```Dm```", true)
-            .addField("PERMISSIONS", "```Administrator```", true)
+            .addField("PERMISSIONS", "```MANAGE_MESSAGES```", true)
             .addField("USAGE", "```>dm @user <message>```", true)
             .addField("DESCRIPTION", "```DM's the specified user a message from me.```", true)
             .setColor(InformationColor)
@@ -42,7 +42,7 @@ module.exports = {
             .setDescription("```" + `Successfully DM'd` + "```")
             .setColor(SuccessColor)
 
-        if (!message.member.permissions.has("ADMINISTRATOR")) {
+        if (!message.member.permissions.has("MANAGE_MESSAGES")) {
             return message.channel.send(Embed2)
         }
 

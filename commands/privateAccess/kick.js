@@ -22,7 +22,7 @@ module.exports = {
         const Embed1 = new Discord.MessageEmbed()
             .setTitle(`${emoji(`${InformationEmoji}`)}` + " **COMMAND INFO**")
             .addField("COMMAND", "```Kick```", true)
-            .addField("PERMISSIONS", "```Administrator```", true)
+            .addField("PERMISSIONS", "```MANAGE_MESSAGES```", true)
             .addField("USAGE", "```>kick @user <message>```", true)
             .addField("DESCRIPTION", "```Kicks a specified user and attaches a message.```", true)
             .setColor(InformationColor)
@@ -55,7 +55,7 @@ module.exports = {
             return message.channel.send(Embed2)
         }
 
-        if (!message.member.hasPermission("ADMINISTRATOR")) {
+        if (!message.member.hasPermission("MANAGE_MESSAGES")) {
             return message.channel.send(Embed3)
         }
 
@@ -111,12 +111,12 @@ module.exports = {
                 message.channel.send(Embed8)
                     .catch(err => {
                         if (err) {
-                            const Embed6 = new Discord.MessageEmbed()
+                            const ConsoleEmbed = new Discord.MessageEmbed()
                                 .setTitle(`${emoji(`${ErrorEmoji}`)}` + " **TERMINAL ERROR**")
                                 .setDescription("```" + `${err}` + "```")
                                 .setColor(ErrorColor)
 
-                            return message.channel.send(Embed6)
+                            return message.channel.send(ConsoleEmbed)
                         }
                     });
                 const logChannel = message.guild.channels.cache.find(c => c.name === "logs" || "🔒│logs")

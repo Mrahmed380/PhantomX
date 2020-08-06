@@ -33,7 +33,7 @@ module.exports = {
             .setDescription("```" + `Missing permissions.` + "```")
             .setColor(ErrorColor)
 
-        if (!message.member.hasPermission("ADMINISTRATOR")) {
+        if (!message.member.hasPermission("MANAGE_MESSAGES")) {
             return message.channel.send(Embed1)
         }
 

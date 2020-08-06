@@ -20,6 +20,7 @@ module.exports = {
 
         const Embed1 = new Discord.MessageEmbed()
             .setTitle(`${emoji(`${InformationEmoji}`)}` + " **COMMANDS LIST**")
+            .setDescription("Required Permissions: NONE")
             .addField("8ball", "**chance**", true)
             .addField("cmds", "**combine**", true)
             .addField("emojis", "**help**", true)
@@ -31,25 +32,32 @@ module.exports = {
             .addField("timer", "**track**", true)
             .addField("uptime", "**version**", true)
             .addField("weather", `\u200b`, true)
-            .setFooter("Page 1/2")
+            .setFooter("Page 1/3")
             .setColor(InformationColor)
 
         const Embed2 = new Discord.MessageEmbed()
             .setTitle(`${emoji(`${InformationEmoji}`)}` + " **COMMANDS LIST**")
+            .setDescription("Required Permissions: MANAGE_MESSAGES")
             .addField("announce", "**ban**", true)
-            .addField("clean", "**clear**", true)
-            .addField("crash", "**dm**", true)
-            .addField("kick", "**report**", true)
-            .addField("resetstatus", "**role**", true)
-            .addField("setstatus", "**rps**", true)
-            .addField("serverinfo", "**slowmode**", true)
-            .addField("spam", "**vote**", true)
-            .setFooter("Page 2/2")
+            .addField("bans", "**clean**", true)
+            .addField("clear", "**dm**", true)
+            .addField("kick", "**rep**", true)
+            .addField("report", "**role**", true)
+            .addField("slowmode", "**vote**", true)
+            .setFooter("Page 2/3")
+            .setColor(InformationColor)
+
+        const Embed3 = new Discord.MessageEmbed()
+            .setTitle(`${emoji(`${InformationEmoji}`)}` + " **COMMANDS LIST**")
+            .setDescription("Required Permissions: CREATOR")
+            .addField("crash", "**resetstatus**", true)
+            .addField("setstatus", "**spam**", true)
+            .setFooter("Page 3/3")
             .setColor(InformationColor)
 
         const time = 1000 * 1000
 
-        const msg = await message.channel.send(Embed1).then(async msg => {
+        await message.channel.send(Embed1).then(async msg => {
             const Emoji = await promptMessage(msg, message.author, time, ["➡️"]);
 
             if (Emoji === "➡️") {
@@ -59,16 +67,114 @@ module.exports = {
                 }, 100)
             }
 
-            const msg2 = await msg.edit(Embed2).then(async msg2 => {
-                const Emoji2 = await promptMessage(msg2, message.author, time, ["⬅️"]);
+            await msg.edit(Embed2).then(async msg2 => {
+                const Emoji2 = await promptMessage(msg2, message.author, time, ["➡️"]);
+
+                if (Emoji2 === "➡️") {
+
+                    msg2.reactions.removeAll().then(async msg2 => {
+                        msg2.edit(Embed3)
+                    }, 100)
+                }
+            })
+
+            await msg.edit(Embed3).then(async msg3 => {
+                const Emoji3 = await promptMessage(msg3, message.author, time, ["⬅️"]);
+
+                if (Emoji3 === "⬅️") {
+
+                    msg3.reactions.removeAll().then(async msg3 => {
+                        msg3.edit(Embed2)
+                    }, 100)
+                }
+            })
+
+            await msg.edit(Embed2).then(async msg3 => {
+                const Emoji2 = await promptMessage(msg3, message.author, time, ["⬅️"]);
 
                 if (Emoji2 === "⬅️") {
 
-                    msg2.reactions.removeAll().then(async msg2 => {
+                    msg3.reactions.removeAll().then(async msg2 => {
                         msg2.edit(Embed1)
                     }, 100)
                 }
-            });
+            })
         });
+
+        await message.channel.send(Embed1).then(async msg => {
+            const Emoji = await promptMessage(msg, message.author, time, ["➡️"]);
+
+            if (Emoji === "➡️") {
+
+                msg.reactions.removeAll().then(async msg => {
+                    msg.edit(Embed2)
+                }, 100)
+            }
+
+            await msg.edit(Embed2).then(async msg2 => {
+                const Emoji2 = await promptMessage(msg2, message.author, time, ["➡️"]);
+
+                if (Emoji2 === "➡️") {
+
+                    msg2.reactions.removeAll().then(async msg2 => {
+                        msg2.edit(Embed3)
+                    }, 100)
+                }
+            })
+
+            await msg.edit(Embed3).then(async msg3 => {
+                const Emoji3 = await promptMessage(msg3, message.author, time, ["⬅️"]);
+
+                if (Emoji3 === "⬅️") {
+
+                    msg3.reactions.removeAll().then(async msg3 => {
+                        msg3.edit(Embed2)
+                    }, 100)
+                }
+            })
+
+            await msg.edit(Embed2).then(async msg3 => {
+                const Emoji2 = await promptMessage(msg3, message.author, time, ["⬅️"]);
+
+                if (Emoji2 === "⬅️") {
+
+                    msg3.reactions.removeAll().then(async msg2 => {
+                        msg2.edit(Embed1)
+                    }, 100)
+                }
+            })
+            await msg.edit(Embed2).then(async msg2 => {
+                const Emoji2 = await promptMessage(msg2, message.author, time, ["➡️"]);
+
+                if (Emoji2 === "➡️") {
+
+                    msg2.reactions.removeAll().then(async msg2 => {
+                        msg2.edit(Embed3)
+                    }, 100)
+                }
+            })
+
+            await msg.edit(Embed3).then(async msg3 => {
+                const Emoji3 = await promptMessage(msg3, message.author, time, ["⬅️"]);
+
+                if (Emoji3 === "⬅️") {
+
+                    msg3.reactions.removeAll().then(async msg3 => {
+                        msg3.edit(Embed2)
+                    }, 100)
+                }
+            })
+
+            await msg.edit(Embed2).then(async msg3 => {
+                const Emoji2 = await promptMessage(msg3, message.author, time, ["⬅️"]);
+
+                if (Emoji2 === "⬅️") {
+
+                    msg3.reactions.removeAll().then(async msg2 => {
+                        msg2.edit(Embed1)
+                    }, 100)
+                }
+            })
+        })
     }
 }

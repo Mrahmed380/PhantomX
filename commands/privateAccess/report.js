@@ -21,7 +21,7 @@ module.exports = {
         const Embed1 = new Discord.MessageEmbed()
             .setTitle(`${emoji(`${InformationEmoji}`)}` + " **COMMAND INFO**")
             .addField("COMMAND", "```Report```", true)
-            .addField("PERMISSIONS", "```Administrator```", true)
+            .addField("PERMISSIONS", "```MANAGE_MESSAGES```", true)
             .addField("USAGE", "```>report @user <message>```", true)
             .addField("DESCRIPTION", "```Sends an embed to the 'reports' channel and attaches a message.```", true)
             .setColor(InformationColor)
@@ -53,7 +53,7 @@ module.exports = {
             .setDescription("```" + `Illegal report.` + "```")
             .setColor(ErrorColor)
 
-        if (!message.member.hasPermission("ADMINISTRATOR")) {
+        if (!message.member.hasPermission("MANAGE_MESSAGES")) {
             return message.channel.send(Embed3)
         }
 
@@ -65,7 +65,7 @@ module.exports = {
             return message.channel.send(Embed1);
         }
 
-        if (rMember.hasPermission("ADMINISTRATOR")) {
+        if (rMember.hasPermission("MANAGE_MESSAGES")) {
             return message.channel.send(Embed7);
         }
 

@@ -26,7 +26,7 @@ module.exports = {
             .setTitle(`${emoji(`${InformationEmoji}`)}` + " **COMMAND INFO**")
 
             .addField("COMMAND", "```Announce```", true)
-            .addField("PERMISSIONS", "```Administrator```", true)
+            .addField("PERMISSIONS", "```MANAGE_MESSAGES```", true)
             .addField("USAGE", "```>announce #channel <message>```", true)
             .addField("DESCRIPTION", "```Creates an announcement in the specified channel.```", true)
             .setColor(InformationColor)
@@ -36,7 +36,7 @@ module.exports = {
             .setDescription("```" + `Missing argument: message` + "```")
             .setColor(ErrorColor)
 
-        if (!message.member.permissions.has("ADMINISTRATOR")) {
+        if (!message.member.permissions.has("MANAGE_MESSAGES")) {
             return message.channel.send(Embed1)
         }
 

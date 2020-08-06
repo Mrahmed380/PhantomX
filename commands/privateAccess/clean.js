@@ -22,7 +22,7 @@ module.exports = {
             .setDescription("```" + `Missing permissions.` + "```")
             .setColor(ErrorColor)
 
-        if (!message.member.permissions.has("ADMINISTRATOR")) {
+        if (!message.member.permissions.has("MANAGE_MESSAGES")) {
             return message.channel.send(Embed1)
         }
 
@@ -32,9 +32,9 @@ module.exports = {
                     const ConsoleEmbed = new Discord.MessageEmbed()
                         .setTitle(`${emoji(`${ErrorEmoji}`)}` + " **TERMINAL ERROR**")
                         .setDescription("```" + `${err}` + "```")
-                        .setColor(AdminNotificationColor)
+                        .setColor(ErrorColor)
 
-                    return message.channel.send(ErrorColor)
+                    return message.channel.send(ConsoleEmbed)
                 }
             });
     }

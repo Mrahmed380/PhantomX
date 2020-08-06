@@ -20,7 +20,7 @@ module.exports = {
         const Embed1 = new Discord.MessageEmbed()
             .setTitle(`${emoji(`${InformationEmoji}`)}` + " **COMMAND INFO**")
             .addField("COMMAND", "```Say```", true)
-            .addField("PERMISSIONS", "```ADMINISTRATOR```", true)
+            .addField("PERMISSIONS", "```MANAGE_MESSAGES```", true)
             .addField("USAGE", "```>say <message>```", true)
             .addField("DESCRIPTION", "```Repeats whatever the user says.```", true)
             .setColor(InformationColor)
@@ -34,7 +34,7 @@ module.exports = {
             return message.channel.send(Embed1)
         }
 
-        if (!message.member.permissions.has("ADMINISTRATOR")) {
+        if (!message.member.permissions.has("MANAGE_MESSAGES")) {
             return message.channel.send(Embed2)
         }
 

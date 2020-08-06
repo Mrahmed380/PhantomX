@@ -20,7 +20,7 @@ module.exports = {
         const Embed1 = new Discord.MessageEmbed()
             .setTitle(`${emoji(`${InformationEmoji}`)}` + " **COMMAND INFO**")
             .addField("COMMAND", "```Slowmode```", true)
-            .addField("PERMISSIONS", "```Administrator```", true)
+            .addField("PERMISSIONS", "```MANAGE_MESSAGES```", true)
             .addField("USAGE", "```>slowmode <number>```", true)
             .addField("DESCRIPTION", "```Sets a slowmode with the specified seconds. Alternate command is '>cooldown'.```", true)
             .setColor(InformationColor)
@@ -35,7 +35,7 @@ module.exports = {
             .setDescription("```" + `Missing permissions.` + "```")
             .setColor(ErrorColor)
 
-        if (!message.member.permissions.has("ADMINISTRATOR")) {
+        if (!message.member.permissions.has("MANAGE_MESSAGES")) {
             return message.channel.send(Embed3)
         }
 
