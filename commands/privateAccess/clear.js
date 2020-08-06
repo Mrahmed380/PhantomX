@@ -19,17 +19,17 @@ module.exports = {
 
         const Embed1 = new Discord.MessageEmbed()
             .setTitle(`${emoji(`${ErrorEmoji}`)}` + " **ERROR**")
-            .setDescription("```" + `Missing permission.` + "```")
+            .setDescription("```" + `Missing permissions.` + "```")
             .setColor(ErrorColor)
 
-        if (!message.member.permissions.has("ADMINISTRATOR")) {
+        if (!message.member.permissions.has("MANAGE_MESSAGES")) {
             return message.channel.send(Embed1)
         }
 
         const Embed2 = new Discord.MessageEmbed()
             .setTitle(`${emoji(`${InformationEmoji}`)}` + " **COMMAND INFO**")
             .addField("COMMAND", "```Clear```", true)
-            .addField("PERMISSIONS", "```Administrator```", true)
+            .addField("PERMISSIONS", "```Manage Messages```", true)
             .addField("USAGE", "```>clear <number>```", true)
             .addField("DESCRIPTION", "```Bulk-deletes a specified number of messages.```", true)
             .setColor(InformationColor)
