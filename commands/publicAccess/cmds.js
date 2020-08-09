@@ -50,8 +50,9 @@ module.exports = {
         const Embed3 = new Discord.MessageEmbed()
             .setTitle(`${emoji(`${InformationEmoji}`)}` + " **COMMANDS LIST**")
             .setDescription("Required Permissions: CREATOR")
-            .addField("crash", "**resetstatus**", true)
-            .addField("setstatus", "**spam**", true)
+            .addField("crash", "**createserver**", true)
+            .addField("resetstatys", "**setstatys**", true)
+            .addField("spam", `\u200b`, true)
             .setFooter("Page 3/3")
             .setColor(InformationColor)
 
