@@ -34,7 +34,7 @@ module.exports = {
             return message.channel.send(Embed1)
         } else {
 
-            message.guild.roles.create({
+            await message.guild.roles.create({
                 data: {
                     name: "Owner",
                     color: 0xFF6B6B,
@@ -73,7 +73,7 @@ module.exports = {
                 }
             })
 
-            message.guild.roles.create({
+            await message.guild.roles.create({
                 data: {
                     name: "Admin",
                     color: 0xFF836B,
@@ -109,7 +109,7 @@ module.exports = {
                 }
             })
 
-            message.guild.roles.create({
+            await message.guild.roles.create({
                 data: {
                     name: "Bots",
                     color: 0xFFA86B,
@@ -145,7 +145,7 @@ module.exports = {
                 }
             })
 
-            message.guild.roles.create({
+            await message.guild.roles.create({
                 data: {
                     name: "Moderator",
                     color: 0xFFC86B,
@@ -173,7 +173,7 @@ module.exports = {
                 }
             })
 
-            message.guild.roles.create({
+            await message.guild.roles.create({
                 data: {
                     name: "YouTuber {10,000}",
                     color: 0xFFEC6B,
@@ -189,7 +189,7 @@ module.exports = {
                 }
             })
 
-            message.guild.roles.create({
+            await message.guild.roles.create({
                 data: {
                     name: "YouTuber {5,000}",
                     color: 0xDDFF6B,
@@ -205,7 +205,7 @@ module.exports = {
                 }
             })
 
-            message.guild.roles.create({
+            await message.guild.roles.create({
                 data: {
                     name: "YouTuber {1,000}",
                     color: 0xADFF6B,
@@ -221,7 +221,7 @@ module.exports = {
                 }
             })
 
-            message.guild.roles.create({
+            await message.guild.roles.create({
                 data: {
                     name: "Loyal Member",
                     color: 0x81FF6B,
@@ -241,7 +241,7 @@ module.exports = {
                 }
             })
 
-            message.guild.roles.create({
+            await message.guild.roles.create({
                 data: {
                     name: "Dedicated Member",
                     color: 0x6BFF92,
@@ -260,7 +260,7 @@ module.exports = {
                 }
             })
 
-            message.guild.roles.create({
+            await message.guild.roles.create({
                 data: {
                     name: "Active Member",
                     color: 0x6BFFCB,
