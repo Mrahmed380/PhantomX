@@ -51,8 +51,8 @@ module.exports = {
             .setTitle(`${emoji(`${InformationEmoji}`)}` + " **COMMANDS LIST**")
             .setDescription("Required Permissions: CREATOR")
             .addField("crash", "**createserver**", true)
-            .addField("resetstatys", "**setstatys**", true)
-            .addField("spam", `\u200b`, true)
+            .addField("resetstatus", "**setstatus**", true)
+            .addField("type", "vote", true)
             .setFooter("Page 3/3")
             .setColor(InformationColor)
 
