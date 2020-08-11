@@ -39,6 +39,7 @@ module.exports = {
         }
 
         const msg = await message.channel.send(args.join(" ")[0]);
+        message.delete().catch();
         let cur = "";
         args.join(" ").split("").map(async (d, i) => {
             cur += d;
