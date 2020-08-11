@@ -44,6 +44,7 @@ module.exports = {
             .setDescription(args.join(" ")[0])
             .setColor(0xFAFAFA)
 
+        message.delete()
         const msg = await message.channel.send(Embed3)
         let cur = "";
         args.join(" ").split("").map(async (d, i) => {
