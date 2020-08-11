@@ -38,12 +38,21 @@ module.exports = {
             return message.channel.send(Embed2)
         }
 
-        const msg = await message.channel.send(args.join(" ")[0]);
-        message.delete().catch();
+        const Embed3 = new Discord.MessageEmbed()
+            .setTitle(message.author.username)
+            .setThumbnail(message.author.displayAvatarURL({ dynamic: true, format: "png" }))
+            .setDescription(args.join(" ")[0])
+
+        const msg = await message.channel.send(Embed3)
         let cur = "";
         args.join(" ").split("").map(async (d, i) => {
             cur += d;
-            await msg.edit(cur)
+            const Embed4 = new Discord.MessageEmbed()
+                .setTitle(message.author.username)
+                .setThumbnail(message.author.displayAvatarURL({ dynamic: true, format: "png" }))
+                .setDescription(cur)
+
+            await msg.edit(Embed4)
         })
     }
 }
