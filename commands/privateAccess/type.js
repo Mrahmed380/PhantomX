@@ -42,6 +42,7 @@ module.exports = {
             .setTitle(message.author.username)
             .setThumbnail(message.author.displayAvatarURL({ dynamic: true, format: "png" }))
             .setDescription(args.join(" ")[0])
+            .setColor(0xFAFAFA)
 
         const msg = await message.channel.send(Embed3)
         let cur = "";
@@ -51,6 +52,7 @@ module.exports = {
                 .setTitle(message.author.username)
                 .setThumbnail(message.author.displayAvatarURL({ dynamic: true, format: "png" }))
                 .setDescription(cur)
+                .setColor(0xFAFAFA)
 
             await msg.edit(Embed4)
         })
