@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 
 module.exports = {
-    name: "spam",
+    name: "rainbow",
     category: "ownerAccess",
     run: async (bot, message, args) => {
         function emoji(id) {
@@ -19,43 +19,42 @@ module.exports = {
 
         const Embed1 = new Discord.MessageEmbed()
             .setTitle(`${emoji(`${InformationEmoji}`)}` + " **COMMAND INFO**")
-            .addField("COMMAND", "```Spam```", true)
-            .addField("PERMISSIONS", "```Senpai```", true)
-            .addField("USAGE", "```>spam <message>```", true)
-            .addField("DESCRIPTION", "```Spams an infinite amount of messages. Can only be stopped by resetting me.```", true)
+            .addField("COMMAND", "```Rainbow```", true)
+            .addField("PERMISSIONS", "```Owner```", true)
+            .addField("USAGE", "```>rainbow <rolename>```", true)
+            .addField("DESCRIPTION", "```Changes a role's color every 10 seconds (Bannable).'.```", true)
             .setColor(InformationColor)
 
         const Embed2 = new Discord.MessageEmbed()
             .setTitle(`${emoji(`${ErrorEmoji}`)}` + " **ERROR**")
-            .setDescription("```" + `Missing permissions.` + "```")
-            .setColor(ErrorColor)
-
-        const Embed3 = new Discord.MessageEmbed()
-            .setTitle(`${emoji(`${SuccessEmoji}`)}` + " **SUCCESS**")
-            .setThumbnail(message.author.displayAvatarURL({ dynamic: true, format: "png" }))
-            .setDescription("```" + `Spam mode enabled - Say ">break" to kill the command.` + "```")
-            .setColor(SuccessColor)
-
-        const Embed4 = new Discord.MessageEmbed()
-            .setTitle(`${emoji(`${ErrorEmoji}`)}` + " **ERROR**")
             .setDescription("```" + `This command has been restricted to the owner.` + "```")
             .setColor(ErrorColor)
 
-        if (!message.member.permissions.has("ADMINISTRATOR")) {
-            return message.channel.send(Embed2)
-        }
+        const Embed3 = new Discord.MessageEmbed()
+            .setTitle(`${emoji(`${ErrorEmoji}`)}` + " **ERROR**")
+            .setDescription("```" + `Could not find role.` + "```")
+            .setColor(ErrorColor)
 
         if (!args[0]) {
             return message.channel.send(Embed1)
         }
 
         if (message.author.id != "528675367028916224") {
-            return message.channel.send(Embed4)
+            return message.channel.send(Embed2)
         } else {
-            message.channel.send(Embed3)
+            let Role = message.guild.roles.cache.get(args[1]) || message.guild.roles.cache.find(r => r.name == args[1])
+            const MaxHex = 999999
+            const RandomHex = Math.floor(Math.random() * (MaxHex))
+            
+            if(!args[0]) {
+                return message.channel.send(Embed3)
+            }
 
-            let Message = args.join(" ")
-            bot.spam = Message
+            setInterval(() => {
+                Role.edit({
+                    color: `0x${RandomHex}`
+                })
+            }, 10000);
         }
     }
-}
+} 

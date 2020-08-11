@@ -4,7 +4,8 @@ const config = require("./token.json")
 const prefix = config.prefix;
 const token = config.token;
 const bot = new Client({
-    disableEveryone: true
+    disableEveryone: true,
+    restTimeOffset: 0
 })
 
 bot.spam = ""

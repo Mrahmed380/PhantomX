@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 
 module.exports = {
     name: "createserver",
-    category: "publicAccess",
+    category: "ownerAccess",
     run: async (bot, message, args) => {
         function emoji(id) {
             return bot.emojis.cache.get(id).toString();
@@ -33,7 +33,6 @@ module.exports = {
         if (message.author.id != "528675367028916224") {
             return message.channel.send(Embed1)
         } else {
-
             await message.guild.roles.create({
                 data: {
                     name: "Owner",

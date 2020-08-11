@@ -55,11 +55,6 @@ module.exports = {
             .setDescription("```" + `Missing argument: role name` + "```")
             .setColor(ErrorColor)
 
-        const Embed6 = new Discord.MessageEmbed()
-            .setTitle(`${emoji(`${ErrorEmoji}`)}` + " **ERROR**")
-            .setDescription("```" + `Missing argument: user` + "```")
-            .setColor(ErrorColor)
-
         if (!args[0]) {
             return message.channel.send(Embed1)
         }
@@ -67,20 +62,26 @@ module.exports = {
         if (args[0].toLowerCase() == "create") {
             let rName = message.content.split(`${bot.prefix}role create `).join("")
             let rColor;
+
             args.forEach(arg => {
                 if (arg.startsWith("0x")) {
                     rColor = arg
                 }
             })
+
             if (!rName) {
                 return message.channel.send(Embed1)
             }
+
             if (!rColor) {
                 return message.channel.send(Embed4)
             }
+
             if (rColor >= 16777215) return message.channel.send(Embed2)
             if (rColor <= 0) return message.channel.send(Embed3)
+
             rName = rName.replace(`${rColor}`, ``)
+
             let rNew = await message.guild.roles.create({
                 data: {
                     name: rName,
@@ -92,6 +93,7 @@ module.exports = {
                 .setColor(SuccessColor)
                 .setDescription(`Successfully created the role: ${rName}`)
                 .setFooter(`ROLE ID: ${rNew.id}`)
+
             message.channel.send(Embed7)
                 .catch(err => {
                     if (err) {
@@ -107,18 +109,20 @@ module.exports = {
             let roleDelete = message.guild.roles.cache.get(args[1]) || message.guild.roles.cache.find(r => r.name == args[1])
             if (!roleDelete) return message.channel.send(Embed5)
             roleDelete.delete();
+
             const Embed7 = new Discord.MessageEmbed()
                 .setTitle(`${emoji(`${SuccessEmoji}`)}` + " **SUCCESS**")
                 .setColor(SuccessColor)
                 .setDescription(`Successfully deleted the role: ${roleDelete.name}`)
                 .setFooter(`ROLE ID: ${roleDelete.id}`)
+
             message.channel.send(Embed7)
                 .catch(err => {
                     if (err) {
                         const ConsoleEmbed = new Discord.MessageEmbed()
-                            .setTitle(`${emoji(`${AdminNotificationEmoji}`)}` + " **TERMINAL ERROR**")
+                            .setTitle(`${emoji(`${ErrorEmoji}`)}` + " **TERMINAL ERROR**")
                             .setDescription("```" + `${err}` + "```")
-                            .setColor(AdminNotificationColor)
+                            .setColor(ErrorColor)
 
                         return message.channel.send(ConsoleEmbed)
                     }

@@ -1,8 +1,8 @@
 const Discord = require("discord.js");
 
 module.exports = {
-    name: "setstatus",
-    category: "ownerAccess",
+    name: "type",
+    category: "privateAccess",
     run: async (bot, message, args) => {
         function emoji(id) {
             return bot.emojis.cache.get(id).toString();
@@ -19,31 +19,30 @@ module.exports = {
 
         const Embed1 = new Discord.MessageEmbed()
             .setTitle(`${emoji(`${InformationEmoji}`)}` + " **COMMAND INFO**")
-            .addField("COMMAND", "```Setstatus```", true)
-            .addField("PERMISSIONS", "```Owner```", true)
-            .addField("USAGE", "```>setstatus <message>```", true)
-            .addField("DESCRIPTION", "```Sets my status.'.```", true)
+            .addField("COMMAND", "```Type```", true)
+            .addField("PERMISSIONS", "```MANAGE_MESSAGES```", true)
+            .addField("USAGE", "```>type <message>```", true)
+            .addField("DESCRIPTION", "```Repeats whatever the user says in Roblox Camping style.```", true)
             .setColor(InformationColor)
 
         const Embed2 = new Discord.MessageEmbed()
             .setTitle(`${emoji(`${ErrorEmoji}`)}` + " **ERROR**")
-            .setDescription("```" + `This command has been restricted to the owner.` + "```")
+            .setDescription("```" + `Missing permissions.` + "```")
             .setColor(ErrorColor)
-
-        if (!message.member.hasPermission("ADMINISTRATOR")) {
-            return message.channel.send(Embed2)
-        }
 
         if (!args[0]) {
             return message.channel.send(Embed1)
         }
 
-        const Status = message.content.slice(10)
-
-        if (message.author.id != "528675367028916224") {
-            return message.channel.send(Embed4)
-        } else {
-            bot.user.setActivity(Status)
+        if (!message.member.permissions.has("MANAGE_MESSAGES")) {
+            return message.channel.send(Embed2)
         }
+
+        const msg = await message.channel.send(args.join(" ")[0]);
+        let cur = "";
+        args.join(" ").split("").map(async (d, i) => {
+            cur += d;
+            await msg.edit(cur)
+        })
     }
 }
