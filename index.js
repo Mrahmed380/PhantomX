@@ -5,7 +5,7 @@ const prefix = config.prefix;
 const token = config.token;
 const bot = new Client({
     disableEveryone: true,
-    restTimeOffset: 0
+    restTimeOffset: 2000
 })
 
 bot.spam = ""

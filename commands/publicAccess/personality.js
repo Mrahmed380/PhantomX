@@ -70,7 +70,6 @@ module.exports = {
             return message.channel.send(Embed2)
         } else {
             message.channel.send(Embed1)
-            message.channel.send(Embed2)
                 .catch(err => {
                     if (err) {
                         const ConsoleEmbed = new Discord.MessageEmbed()
