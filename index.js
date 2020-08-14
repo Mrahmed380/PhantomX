@@ -28,7 +28,6 @@ bot.on("ready", () => {
     }, 700);
 })
 
-
 bot.on("message", async message => {
     if (message.author.bot) return;
     if (!message.content.startsWith(prefix)) return;
@@ -52,4 +51,5 @@ bot.on("message", async (message) => {
         message.channel.send(bot.spam)
     }
 })
+
 bot.login(token)

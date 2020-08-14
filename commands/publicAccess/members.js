@@ -19,8 +19,9 @@ module.exports = {
 
         const Embed = new Discord.MessageEmbed()
             .setThumbnail(bot.user.displayAvatarURL())
-            .addField("**TOTAL MEMBERS IN THIS SERVER**", "```" + message.guild.memberCount + "```", true)
-            .setFooter("Bots are included.")
+            .addField("**TOTAL MEMBERS**", "```" + message.guild.memberCount + "```", true)
+            .addField("Online", "```" + `${message.guild.members.cache.filter(m => m.user.presence.status != "offline").size}` + "```", true)
+            .addField("Offline", "```" + `${message.guild.members.cache.filter(m => m.user.presence.status != "online").size}` + "```", true)
             .setColor(0xFAFAFA)
 
         message.channel.send(Embed)
