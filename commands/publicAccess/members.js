@@ -21,7 +21,7 @@ module.exports = {
             .setThumbnail(bot.user.displayAvatarURL())
             .addField("**TOTAL MEMBERS**", "```" + message.guild.memberCount + "```", true)
             .addField("Online", "```" + `${message.guild.members.cache.filter(m => m.user.presence.status != "offline").size}` + "```", true)
-            .addField("Offline", "```" + `${message.guild.members.cache.filter(m => m.user.presence.status != "online").size}` + "```", true)
+            .addField("Offline", "```" + `${message.guild.members.cache.filter(m => m.user.presence.status == "online").size}` + "```", true)
             .setColor(0xFAFAFA)
 
         message.channel.send(Embed)
