@@ -47,15 +47,14 @@ module.exports = {
 
         const banLog2 = fetchedLogs.entries.first(-1)
         const { target2 } = banLog2.map(user => {
-            banLog2
-            console.log(target2)
+            return banLog2
+            console.log(banLog2)
         })
 
         const Embed2 = new Discord.MessageEmbed()
             .setTitle(`${emoji(`${InformationEmoji}`)}` + " **BANS**")
-            .setDescription("Recent Bans")
-            .addField(`${Emoji1} ${target.tag}`, `**${Emoji2} ${target2}**`)
-            .addField(`${Emoji3} ${"~"}`, `**${Emoji4} ${"~"}**`)
+            .setDescription("Recent Ban")
+            .addField(`${Emoji1} ${target.tag}`)
             .setColor(InformationColor)
 
         message.channel.send(Embed2)

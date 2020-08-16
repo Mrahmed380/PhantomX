@@ -26,10 +26,40 @@ module.exports = {
             .addField("DESCRIPTION", "```Displays the weather information on the specified place. (No continents/countries)```", true)
             .setColor(InformationColor)
 
+        const Number = 100
+        const RandomNumber = Math.floor(Math.random() * 901) + Number
+
         if (!args[0]) {
             return message.channel.send(Embed1)
         } else {
             weather.find({ search: args.join(" "), degreeType: 'C' }, function (err, result) {
+                const Messages = [
+                    `Unfortunately, " ${args.join(" ")}" isn't a place.`,
+                    "That place does not exist.",
+                    `Could not find "${args.join(" ")}".`,
+                    "Unauthorized access to show location.",
+                    "The location you entered may be spelled wrong, or does not exist.",
+                    "Location found, but I could not display it due to the harsh environment.",
+                    `According to Google, this location last existed ${RandomNumber} years ago.`,
+                    "Task failed successfully.",
+                    "You need to stop putting invalid locations",
+                    `"${args.join(" ")}" is too big for my memory file.`,
+                    "Could not load location.",
+                    "Failed to display location",
+                    `"${args.join(" ")}" does not exist.`,
+                    `"${args.join("")}" is not a valid member of "Earth".`
+                ]
+
+                const RandomMessage = Messages[Math.floor(Math.random() * Messages.length)];
+
+                const Embed2 = new Discord.MessageEmbed()
+                    .setTitle(`${emoji(`${ErrorEmoji}`)}` + " **ERROR**")
+                    .setDescription("```" + `${RandomMessage}` + "```")
+                    .setColor(ErrorColor)
+
+                if (!err) {
+                    return message.channel.send(Embed2)
+                }
 
                 var current = result[0].current;
                 var location = result[0].location;
