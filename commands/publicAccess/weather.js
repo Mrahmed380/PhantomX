@@ -47,7 +47,7 @@ module.exports = {
                     "Could not load location.",
                     "Failed to display location",
                     `"${args.join(" ")}" does not exist.`,
-                    `"${args.join("")}" is not a valid member of "Earth".`
+                    `"${args.join("")}" is not a place on "Earth".`
                 ]
 
                 const RandomMessage = Messages[Math.floor(Math.random() * Messages.length)];
@@ -57,7 +57,7 @@ module.exports = {
                     .setDescription("```" + `${RandomMessage}` + "```")
                     .setColor(ErrorColor)
 
-                if (!err) {
+                if (err) {
                     return message.channel.send(Embed2)
                 }
 
